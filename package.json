@@ -1,6 +1,7 @@
 {
-  "name": "03-drum-machine",
-  "version": "0.1.0",
+  "name": "anya-soundboard",
+  "version": "1.0.0",
+  "description": "A soundboard of Anya Forger from Spy x Family",
   "private": true,
   "dependencies": {
     "@mui/material": "^5.8.3",
