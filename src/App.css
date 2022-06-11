@@ -17,12 +17,14 @@ img {
 }
 
 #display {
-  height: auto;
+  height: 4rem;
+  margin: 1rem 0;
 }
 
 #menu {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .drum-action, .drum-pad-subtitle {
@@ -39,6 +41,20 @@ span.MuiBadge-colorSecondary {
   font-size: large;
 }
 
+@media only screen and (max-width: 400px) {
+  #menu {
+    display: flex;
+    flex-direction: column;
+  }
+  #menu-divider {
+    display: none;
+  }
+  .menu-group {
+    justify-content: center;
+  }
+}
+
+/* Transition classes  */
 .fade-enter {
   opacity: 0;
 }

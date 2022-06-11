@@ -13,7 +13,7 @@ function App() {
     language: 'english'
   });
   const [showTransition, setShowTransition] = useState({
-    display: false,
+    display: true,
     button: false
   });
 

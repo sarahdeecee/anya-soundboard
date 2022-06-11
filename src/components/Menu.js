@@ -14,15 +14,17 @@ function Menu(props) {
         value={theme.mode}
         exclusive
         onChange={handleMode}
+        className="menu-group"
       >
         <ToggleButton value="light" sx={{border: 0}} className={theme.mode}>Light</ToggleButton>
         <ToggleButton value="dark" sx={{border: 0}} className={theme.mode}>Dark</ToggleButton>
       </ToggleButtonGroup>
-      <Divider flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
+      <Divider id="menu-divider" flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
       <ToggleButtonGroup
         value={theme.language}
         exclusive
         onChange={handleLanguage}
+        className="menu-group"
       >
         <ToggleButton value="english" sx={{border: 0}} className={theme.mode}>English</ToggleButton>
         <ToggleButton value="romaji" sx={{border: 0}} className={theme.mode}>Romaji</ToggleButton>
