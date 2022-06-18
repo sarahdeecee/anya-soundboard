@@ -5,8 +5,11 @@ This is a soundboard of **Anya Forger**'s lines from the anime **Spy x Family**.
 Currently, there are samples from episodes 1 and 2.
 
 This app also features light and dark modes and a responsive layout.
+### Light mode
 ![Screenshot in light mode](./public/screenshots/screenshot-light-full.png)
-![Screenshot in dark mode](./public/screenshots/screenshot-light-full.png)
+### Dark mode
+![Screenshot in dark mode](./public/screenshots/screenshot-light-dark.png)
+### Mobile version
 ![Screenshot of mobile layout](./public/screenshots/screenshot-light-mobile.png)
 
 ## Stack
