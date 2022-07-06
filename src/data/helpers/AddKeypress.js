@@ -11,7 +11,7 @@ const addKeypress = selectedSamples => {
   const rowLength = Math.ceil(selectedSamples.length / 3);
   
   // Add keypress for each sample
-  samplesWithKeypress = selectedSamples.map((sample, index) => {
+  const samplesWithKeypress = selectedSamples.map((sample, index) => {
     // First keyboard row
     if (index < rowLength) {
       return {...sample, keypress: keyboard.row1[index]}
@@ -29,4 +29,4 @@ const addKeypress = selectedSamples => {
   return samplesWithKeypress;
 };
 
-// export default addKeypress;
+export default addKeypress;

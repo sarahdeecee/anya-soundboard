@@ -1,11 +1,12 @@
 import './App.css';
 import './styles/theme.scss';
+import addKeypress from './data/helpers/AddKeypress';
+import samples from './data/Samples.js';
 import DrumMachine from './components/DrumMachine';
 import Menu from './components/Menu';
 import EpisodePicker from './components/EpisodePicker';
-import samples from './data/Samples.js';
 import useEventListener from './hooks/useKeyPress';
-import { Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField } from "@mui/material";
+import { Paper, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField } from "@mui/material";
 import { useState } from "react";
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
 
   const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
   
-  const selectedSamples = samples.filter(sample => selectedEpisodes.includes(sample.episode));
+  const selectedSamples = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
 
   const handleKeyPress = e => {
     console.log(e.key);
@@ -66,7 +67,7 @@ function App() {
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
-      <Button variant="outlined" onClick={handleOpenEpisodes}>
+      <Button variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}>
         Choose Episodes
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
