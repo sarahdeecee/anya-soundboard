@@ -1,9 +1,8 @@
-import { Checkbox, FormControlLabel } from "@mui/material";
+import { Checkbox, FormControlLabel, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField, Grid } from "@mui/material";
 import { useState } from "react";
 
 function EpisodePicker(props) {
-  const {checked, setChecked} = props;
-
+  const {checked, setChecked, onClose} = props;
 
   const numberOfEpisodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -39,25 +38,36 @@ function EpisodePicker(props) {
         12: true,});
   };
   
-  const episodeList = numberOfEpisodes.map((episode) => <FormControlLabel
-    key={episode}
-    label={`Episode ${episode}`}
-    value={episode}
-    control={<Checkbox checked={checked[episode]} onChange={handleCheck} />}
-  />)
+  const episodeList = numberOfEpisodes.map((episode) => <Grid item>
+      <FormControlLabel
+        key={episode}
+        label={`Episode ${episode}`}
+        value={episode}
+        control={<Checkbox checked={checked[episode]} onChange={handleCheck} />}
+      />
+    </Grid>
+  );
 
   return (<>
-    <FormControlLabel
-      label={!Object.values(checked).includes(true) ? 'Select All' : 'Deselect All'}
-      control={
-        <Checkbox
-          checked={Object.values(checked).includes(true) && !Object.values(checked).includes(false)}
-          indeterminate={Object.values(checked).includes(true) && Object.values(checked).includes(false)}
-          onChange={handleCheckAll}
-        />
-      }
-    />
-    {episodeList}
+  <DialogTitle>Choose Episodes</DialogTitle>
+    <DialogContent>
+      <FormControlLabel
+        label={!Object.values(checked).includes(true) ? 'Select All' : 'Deselect All'}
+        control={
+          <Checkbox
+            checked={Object.values(checked).includes(true) && !Object.values(checked).includes(false)}
+            indeterminate={Object.values(checked).includes(true) && Object.values(checked).includes(false)}
+            onChange={handleCheckAll}
+          />
+        }
+      />
+      <Grid container sx={{justifySelf: "stretch"}}>
+      {episodeList}
+      </Grid>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onClose}>Close</Button>
+      </DialogActions>
     </>
   );
 }
