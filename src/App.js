@@ -17,6 +17,20 @@ function App() {
     display: true,
     button: false
   });
+  const [checked, setChecked] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
+    7: false,
+    8: false,
+    9: false,
+    10: false,
+    11: false,
+    12: false,
+  });
 
   function playAudio(url) {
     new Audio(url).play();
@@ -37,7 +51,7 @@ function App() {
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
-      <EpisodePicker />
+      <EpisodePicker checked={checked} setChecked={setChecked} />
       <DrumMachine sample={sample} setSample={setSample} samples={samples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
     </div>
   );
