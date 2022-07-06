@@ -38,9 +38,13 @@ function App() {
     new Audio(url).play();
   }
 
+  const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
+  
+  const selectedSamples = samples.filter(sample => selectedEpisodes.includes(sample.episode));
+
   const handleKeyPress = e => {
     console.log(e.key);
-    const filteredSample = samples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
+    const filteredSample = selectedSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
       setSample(filteredSample);
@@ -55,24 +59,21 @@ function App() {
     setOpenEpisodePicker(false);
   };
 
-  const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
-  
-  const selectedSamples = samples.filter(sample => selectedEpisodes.includes(sample.episode));
+  const isSamplesEmpty = !Object.values(checked).includes(true);
 
   useEventListener("keydown", handleKeyPress);
 
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
-
       <Button variant="outlined" onClick={handleOpenEpisodes}>
         Choose Episodes
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} />
       </Dialog>
-
       <DrumMachine sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
+      {isSamplesEmpty && "No episodes selected!"}
     </div>
   );
 }
