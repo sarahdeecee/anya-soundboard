@@ -6,7 +6,7 @@ import DrumMachine from './components/DrumMachine';
 import Menu from './components/Menu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
-import { Paper, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField } from "@mui/material";
+import { Button, Dialog } from "@mui/material";
 import { useState } from "react";
 
 function App() {
@@ -56,6 +56,8 @@ function App() {
     }
   }
 
+  useEventListener("keydown", handleKeyPress);
+
   // Handle episode picker dialog
   const handleOpenEpisodes = () => {
     setOpenEpisodePicker(true);
@@ -65,8 +67,6 @@ function App() {
   };
 
   const isSamplesEmpty = !Object.values(checked).includes(true);
-
-  useEventListener("keydown", handleKeyPress);
 
   return (
     <div className={`App ${theme.mode}`}>
