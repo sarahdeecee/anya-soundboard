@@ -2,6 +2,7 @@ import './App.css';
 import './styles/theme.scss';
 import DrumMachine from './components/DrumMachine';
 import Menu from './components/Menu';
+import EpisodePicker from './components/EpisodePicker';
 import samples from './data/Samples.js';
 import useEventListener from './hooks/useKeyPress';
 import { useState } from "react";
@@ -36,6 +37,7 @@ function App() {
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
+      <EpisodePicker />
       <DrumMachine sample={sample} setSample={setSample} samples={samples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
     </div>
   );
