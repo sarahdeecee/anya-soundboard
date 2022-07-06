@@ -35,14 +35,17 @@ function App() {
   });
   const [openEpisodePicker, setOpenEpisodePicker] = useState(false);
 
-  function playAudio(url) {
+  // Create array of selected episodes
+  const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
+  
+  // Select samples from episodes and add associated keys
+  const selectedSamples = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
+
+  const playAudio = (url) => {
     new Audio(url).play();
   }
 
-  const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
-  
-  const selectedSamples = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
-
+  // Handle play audio on keypress
   const handleKeyPress = e => {
     console.log(e.key);
     const filteredSample = selectedSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
@@ -53,6 +56,7 @@ function App() {
     }
   }
 
+  // Handle episode picker dialog
   const handleOpenEpisodes = () => {
     setOpenEpisodePicker(true);
   };
