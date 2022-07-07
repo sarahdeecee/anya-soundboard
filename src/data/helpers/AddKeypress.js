@@ -17,9 +17,11 @@ const addKeypress = selectedSamples => {
   const samplesWithKeypress = selectedSamples.map((sample, index) => {
     if (selectedSamples.length < keyboardShort.length) {
       return {...sample, keypress: keyboardShort[index]};
-    } else {
+    } else if (selectedSamples.length < keyboardLong.length) {
       // If selected samples exceed 3 rows of 6, use full keyboard
       return {...sample, keypress: keyboardLong[index]};
+    } else {
+      return {...sample};
     }
   })
 
