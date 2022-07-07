@@ -81,42 +81,42 @@ const samples = [
     japanese: 'ガーン！',
     episode: '3',
     file: '../../03-gan.mp3',
-    picture: ''
+    picture: '../../03-gan.png'
   },
   { english: 'An ooting, an ooting, la la la la',
     romaji: 'odekeke odekeke ran ra ra ran',
     japanese: 'お出けけお出けけらんらららん',
     episode: '3',
     file: '../../03-odekeke.mp3',
-    picture: ''
+    picture: '../../03-odekeke.png'
   },
-  { english: 'I can see her boobies!',
-    romaji: 'tsupponpon tsupponpon!',
-    japanese: 'ツッポンポンツッポンポン！',
+  { english: 'She\'s all nakie!',
+    romaji: 'supponpon ssupponpon!',
+    japanese: 'スッポンポンスッポンポン！',
     episode: '3',
     file: '../../03-supponpon.mp3',
-    picture: ''
+    picture: '../../03-supponpon.png'
   },
-  { english: 'Head got choppy-chopped, body got choppy-chopped',
+  { english: 'Head got chopped, body got chopped',
     romaji: 'kubi chonpa karada chonpa',
     japanese: '首チョンパ体チョンパ',
     episode: '3',
     file: '../../03-kubichonpa.mp3',
-    picture: ''
+    picture: '../../03-kubichonpa.png'
   },
   { english: 'S\'all good, papa',
     romaji: 'donmai chichi',
     japanese: 'ドンマイ、父',
     episode: '3',
     file: '../../03-donmaichichi.mp3',
-    picture: ''
+    picture: '../../03-donmaichichi.png'
   },
   { english: 'The people are like tiny bits of trash...',
     romaji: 'hito ga gomi no you da...',
     japanese: '人がゴミのようだ…',
     episode: '3',
     file: '../../03-hitogagomi.mp3',
-    picture: ''
+    picture: '../../03-hitogagomi.png'
   },
 ];
 
