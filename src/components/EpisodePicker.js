@@ -4,7 +4,9 @@ import { useState } from "react";
 function EpisodePicker(props) {
   const {checked, setChecked, onClose} = props;
 
-  const numberOfEpisodes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const numberOfEpisodes = [1, 2, 3,
+    // 4, 5, 6, 7, 8, 9, 10, 11, 12
+  ];
 
   const handleCheck = (e) => {
     setChecked({...checked, [e.target.value]: e.target.checked});
@@ -15,27 +17,29 @@ function EpisodePicker(props) {
     Object.values(checked).includes(true) ? setChecked({1: false,
       2: false,
       3: false,
-      4: false,
-      5: false,
-      6: false,
-      7: false,
-      8: false,
-      9: false,
-      10: false,
-      11: false,
-      12: false})
+      // 4: false,
+      // 5: false,
+      // 6: false,
+      // 7: false,
+      // 8: false,
+      // 9: false,
+      // 10: false,
+      // 11: false,
+      // 12: false
+    })
       : setChecked({1: true,
         2: true,
         3: true,
-        4: true,
-        5: true,
-        6: true,
-        7: true,
-        8: true,
-        9: true,
-        10: true,
-        11: true,
-        12: true,});
+        // 4: true,
+        // 5: true,
+        // 6: true,
+        // 7: true,
+        // 8: true,
+        // 9: true,
+        // 10: true,
+        // 11: true,
+        // 12: true,
+      });
   };
   
   const episodeList = numberOfEpisodes.map((episode) => <Grid item>
