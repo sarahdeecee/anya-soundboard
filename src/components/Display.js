@@ -4,7 +4,8 @@ function Display(props) {
   const {english, romaji, japanese, theme, showTransition } = props;
   const sample = {english, romaji, japanese};
   const noSampleYet = (new Boolean(english)).valueOf();
-  const displayText = noSampleYet ? sample[theme.language] : 'Click an image below or press the corresponding key to hear the sample.';
+  const displayEnglish = noSampleYet ? english : 'Click an image below or press the corresponding key to hear the sample.';
+  const displayJapanese = noSampleYet ? japanese : '下の画像をクリックし（または画像に応じたキーを押して）、音が出ます。';
 
   return (
     <SwitchTransition>
@@ -14,7 +15,7 @@ function Display(props) {
           node.addEventListener("transitionend", done, false);
         }}
         >
-        <Typography variant={noSampleYet ? 'h3' : 'h5'} component="h1" id="display" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{displayText}</Typography>
+        <Typography variant={noSampleYet ? 'h3' : 'h5'} component="h1" id="display" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{(theme.language === 'japanese') ? displayJapanese : displayEnglish}</Typography>
       </CSSTransition>
     </SwitchTransition>
   );

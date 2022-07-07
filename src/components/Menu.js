@@ -16,8 +16,8 @@ function Menu(props) {
         onChange={handleMode}
         className="menu-group"
       >
-        <ToggleButton value="light" sx={{border: 0}} className={theme.mode}>Light</ToggleButton>
-        <ToggleButton value="dark" sx={{border: 0}} className={theme.mode}>Dark</ToggleButton>
+        <ToggleButton value="light" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ライト' : 'Light'}</ToggleButton>
+        <ToggleButton value="dark" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ダーク' : 'Dark'}</ToggleButton>
       </ToggleButtonGroup>
       <Divider id="menu-divider" flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
       <ToggleButtonGroup
@@ -26,9 +26,9 @@ function Menu(props) {
         onChange={handleLanguage}
         className="menu-group"
       >
-        <ToggleButton value="english" sx={{border: 0}} className={theme.mode}>English</ToggleButton>
-        <ToggleButton value="romaji" sx={{border: 0}} className={theme.mode}>Romaji</ToggleButton>
-        <ToggleButton value="japanese" sx={{border: 0}} className={theme.mode}>Japanese</ToggleButton>
+        <ToggleButton value="english" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? '英語' : 'English'}</ToggleButton>
+        <ToggleButton value="romaji" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ローマ字' : 'Romaji'}</ToggleButton>
+        <ToggleButton value="japanese" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? '日本語' : 'Japanese'}</ToggleButton>
       </ToggleButtonGroup>
     </Paper>
   );

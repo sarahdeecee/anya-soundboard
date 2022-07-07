@@ -72,13 +72,13 @@ function App() {
       <Menu theme={theme} setTheme={setTheme} />
       <Button id="episode-picker-btn" variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}
       sx={{mt: 2}}>
-        Choose Episodes
+        {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} sample={sample} setSample={setSample} />
       </Dialog>
       <SampleBoard sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-      {isSamplesEmpty && "No episodes selected!"}
+      {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
     </div>
   );
 }
