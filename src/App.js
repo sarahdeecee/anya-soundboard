@@ -47,7 +47,6 @@ function App() {
 
   // Handle play audio on keypress
   const handleKeyPress = e => {
-    console.log(e.key);
     const filteredSample = selectedSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
