@@ -3,9 +3,7 @@ import { Checkbox, FormControlLabel, Button, DialogTitle, DialogActions, DialogC
 function EpisodePicker(props) {
   const {checked, setChecked, onClose, setSample} = props;
 
-  const numberOfEpisodes = [1, 2, 3, 4,
-    // 5, 
-    6, 
+  const numberOfEpisodes = [1, 2, 3, 4, 5, 6, 
     // 7, 8, 9, 10, 11, 12
   ];
 
@@ -18,7 +16,7 @@ function EpisodePicker(props) {
       2: false,
       3: false,
       4: false,
-      // 5: false,
+      5: false,
       6: false,
       // 7: false,
       // 8: false,
@@ -33,7 +31,7 @@ function EpisodePicker(props) {
         2: true,
         3: true,
         4: true,
-        // 5: true,
+        5: true,
         6: true,
         // 7: true,
         // 8: true,
