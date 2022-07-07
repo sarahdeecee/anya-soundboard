@@ -71,7 +71,8 @@ function App() {
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
-      <Button variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}>
+      <Button id="episode-picker-btn" variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}
+      sx={{mt: 2}}>
         Choose Episodes
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>

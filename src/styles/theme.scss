@@ -29,6 +29,12 @@ span.MuiBadge-colorSecondary {
   color: var(--theme-accent-dark);
 }
 
+#episode-picker-btn {
+  color: var(--theme-color);
+  background-color: var(--theme-accent-light);
+  border-color: var(--theme-accent-dark);
+}
+
 img {
   border: 2px solid var(--theme-border);
 }
