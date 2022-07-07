@@ -3,78 +3,85 @@ const samples = [
     romaji: 'wakuwaku...!',
     japanese: 'ワクワク...!',
     episode: '1',
-    file: '../../wakuwaku1.mp3',
-    picture: '../../wakuwaku1.png'
+    file: '../../01-wakuwaku.mp3',
+    picture: '../../01-wakuwaku.png'
   },
   { english: 'K!',
     romaji: 'ui',
     japanese: 'うい',
     episode: '1',
-    file: '../../ui.mp3',
-    picture: '../../ui.png'
+    file: '../../01-ui.mp3',
+    picture: '../../01-ui.png'
   },
   { english: 'Bomby bomb, bomby bomb!',
     romaji: 'bakudan bakudan!',
     japanese: '爆弾、爆弾！',
     episode: '1',
-    file: '../../bakudanbakudan.mp3',
-    picture: '../../bakudan.png'
+    file: '../../01-bakudan.mp3',
+    picture: '../../01-bakudan.png'
   },
   { english: 'Peanuts!',
     romaji: 'Peanuts!',
     japanese: 'ピーナッツ！',
     episode: '1',
-    file: '../../peanuts.mp3',
-    picture: '../../peanuts.png'
+    file: '../../01-peanuts.mp3',
+    picture: '../../01-peanuts.png'
   },
-  { english: 'So exciting!',
-    romaji: 'wa~kuwaku',
-    japanese: 'ワ〜クワク',
-    episode: '1',
-    file: '../../wakuwaku2.mp3',
-    picture: '../../wakuwaku2.png'
+  // { english: 'So exciting!',
+  //   romaji: 'wa~kuwaku',
+  //   japanese: 'ワ〜クワク',
+  //   episode: '1',
+  //   file: '../../wakuwaku2.mp3',
+  //   picture: '../../wakuwaku2.png'
+  // },
+  { english: 'I\'m getting sold off!',
+    romaji: 'Anya, uritobasareru!',
+    japanese: 'アーニャ、売り飛ばされる〜！',
+    episode: '2',
+    file: '../../02-uri.mp3',
+    picture: '../../02-uri.png'
   },
   { english: 'SO EXCITING!',
     romaji: 'WAKUWAKU',
     japanese: 'ワクワク！！',
     episode: '2',
-    file: '../../wakuwaku3.mp3',
-    picture: '../../wakuwaku3.png'
+    file: '../../02-wakuwaku.mp3',
+    picture: '../../02-wakuwaku.png'
   },
   { english: 'Ah~',
     romaji: 'Ah~',
     japanese: 'あ〜',
     episode: '2',
-    file: '../../aa.mp3',
-    picture: '../../aa.png'
+    file: '../../02-aa.mp3',
+    picture: '../../02-aa.png'
   },
   { english: 'Anya is lonely without a mother~',
     romaji: 'Anya, haha inakute samishii',
     japanese: 'アーニャ、母いなくて寂しい',
     episode: '2',
-    file: '../../hahainakutesamishii.mp3',
-    picture: '../../hahainakutesamishii.png'
+    file: '../../02-hahainakutesamishii.mp3',
+    picture: '../../02-hahainakutesamishii.png'
   },
   { english: 'Anya longs for a mother~',
     romaji: 'Haha no sonzai koishii',
     japanese: '母の存在恋しい',
     episode: '2',
-    file: '../../hahanosonzaikoishii.mp3',
-    picture: '../../hahanosonzaikoishii.png'
+    file: '../../02-hahanosonzaikoishii.mp3',
+    picture: '../../02-hahanosonzaikoishii.png'
   },
-  { english: 'K',
-    romaji: 'ui',
-    japanese: 'うい',
-    episode: '2',
-    file: '../../ui2.mp3',
-    picture: '../../ui2.png'
-  },
+  // { english: 'K',
+  //   romaji: 'ui',
+  //   japanese: 'うい',
+  //   episode: '2',
+  //   file: '../../ui2.mp3',
+  //   picture: '../../ui2.png'
+  // },
   { english: 'Stock on them peanuts!',
     romaji: 'peanuts kaikondoke!',
     japanese: 'ピーナッツ買い込んどけ！',
     episode: '2',
-    file: '../../peanutskaikondoke.mp3',
-    picture: '../../peanutskaikondoke.png'
+    file: '../../02-peanutskaikondoke.mp3',
+    picture: '../../02-peanutskaikondoke.png'
   },
   { english: 'Gah!',
     romaji: 'GAN',
@@ -91,7 +98,7 @@ const samples = [
     picture: '../../03-odekeke.png'
   },
   { english: 'She\'s all nakie!',
-    romaji: 'supponpon ssupponpon!',
+    romaji: 'supponpon supponpon!',
     japanese: 'スッポンポンスッポンポン！',
     episode: '3',
     file: '../../03-supponpon.mp3',
