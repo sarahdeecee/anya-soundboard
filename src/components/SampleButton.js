@@ -19,7 +19,7 @@ function SampleButton(props) {
     alt={english}
     onClick={clickPicture}
   />
-  console.log('keypress ', (keypress === ''));
+  
   return (
     <CSSTransition timeout={50}>
       <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '')}>
