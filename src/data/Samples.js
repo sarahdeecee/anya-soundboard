@@ -75,7 +75,49 @@ const samples = [
     episode: '2',
     file: '../../peanutskaikondoke.mp3',
     picture: '../../peanutskaikondoke.png'
-  }
+  },
+  { english: 'Gah!',
+    romaji: 'GAN',
+    japanese: 'ガーン！',
+    episode: '3',
+    file: '../../03-gan.mp3',
+    picture: ''
+  },
+  { english: 'An ooting, an ooting, la la la la',
+    romaji: 'odekeke odekeke ran ra ra ran',
+    japanese: 'お出けけお出けけらんらららん',
+    episode: '3',
+    file: '../../03-odekeke.mp3',
+    picture: ''
+  },
+  { english: 'I can see her boobies!',
+    romaji: 'tsupponpon tsupponpon!',
+    japanese: 'ツッポンポンツッポンポン！',
+    episode: '3',
+    file: '../../03-supponpon.mp3',
+    picture: ''
+  },
+  { english: 'Head got choppy-chopped, body got choppy-chopped',
+    romaji: 'kubi chonpa karada chonpa',
+    japanese: '首チョンパ体チョンパ',
+    episode: '3',
+    file: '../../03-kubichonpa.mp3',
+    picture: ''
+  },
+  { english: 'S\'all good, papa',
+    romaji: 'donmai chichi',
+    japanese: 'ドンマイ、父',
+    episode: '3',
+    file: '../../03-donmaichichi.mp3',
+    picture: ''
+  },
+  { english: 'The people are like tiny bits of trash...',
+    romaji: 'hito ga gomi no you da...',
+    japanese: '人がゴミのようだ…',
+    episode: '3',
+    file: '../../03-hitogagomi.mp3',
+    picture: ''
+  },
 ];
 
 export default samples;
