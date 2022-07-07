@@ -125,52 +125,46 @@ const samples = [
     file: '../../03-hitogagomi.mp3',
     picture: '../../03-hitogagomi.png'
   },
-  // 4:40
-  { english: 'Have a knees day',
+  { english: 'Haba nice day',
     romaji: 'iterasai',
     japanese: 'いてらさい',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-iterasai.mp3',
     picture: '../../06-iterasai.png'
   },
-  // 7:23
   { english: 'Am I cute?',
     romaji: 'anya kawaii?',
     japanese: 'アーニャかわいい？',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-anyakawaii.mp3',
     picture: '../../06-anyakawaii.png'
   },
-  // 7:39
   { english: 'Do dodo do dodo',
     romaji: 'run run run run',
     japanese: 'るんるんるんるん',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-runrun.mp3',
     picture: '../../06-runrun.png'
   },
-  // 11:05
   { english: 'There, there',
     romaji: 'yoshiyoshi',
-    japanese: '',
+    japanese: 'よしよし',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-yoshiyoshi.mp3',
     picture: '../../06-yoshiyoshi.png'
   },
-  // 11:09
   { english: 'Killer punch, kapow!',
     romaji: 'hissatsu panchi pokan!',
-    japanese: '',
+    japanese: '必殺パンチ　ポカーン！',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-hissatsu.mp3',
     picture: '../../06-hissatsu.png'
   },
-  // 11:57
   { english: 'Hah!',
     romaji: 'sei!',
-    japanese: '',
+    japanese: 'せい！',
     episode: '6',
-    file: '../../06-.mp3',
+    file: '../../06-sei.mp3',
     picture: '../../06-sei.png'
   },
   
