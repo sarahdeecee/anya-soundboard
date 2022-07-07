@@ -1,5 +1,4 @@
-import { Checkbox, FormControlLabel, Button, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, TextField, Grid } from "@mui/material";
-import { useState } from "react";
+import { Checkbox, FormControlLabel, Button, DialogTitle, DialogActions, DialogContent, Grid } from "@mui/material";
 
 function EpisodePicker(props) {
   const {checked, setChecked, onClose} = props;

@@ -7,12 +7,12 @@ function DrumMachine(props) {
   
   const drumPads = samples.map(sample => 
       <Grid container item
+        xs={4} md={3} lg={2}
         wrap="nowrap"
         direction="column"
-        xs={6} sm={4} md={3} 
         key={sample.english}
         className="drum-pad">
-        <Grid item xs>
+        <Grid item>
           <DrumPad
             key={`pad-${sample.keypress}`}
             {...sample} 
@@ -36,7 +36,7 @@ function DrumMachine(props) {
   return (
     <div className="drum-machine" tabIndex={0}>
       <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-      <Grid container spacing={{xs: 1, sm: 2}}>
+      <Grid container spacing={{xs: 1, sm: 2}} xs={12}>
         {drumPads}
       </Grid>
     </div>
