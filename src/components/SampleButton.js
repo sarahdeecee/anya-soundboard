@@ -11,17 +11,19 @@ function SampleButton(props) {
     playAudio(file);
     setShowTransition({...showTransition, display: !showTransition.display});
   }
-  
+
+  const sampleImg = <img 
+    id={keypress}
+    src={picture}
+    srcSet={picture}
+    alt={english}
+    onClick={clickPicture}
+  />
+  console.log('keypress ', (keypress === ''));
   return (
     <CSSTransition timeout={50}>
-      <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()}>
-        <img 
-          id={keypress}
-          src={picture}
-          srcSet={picture}
-          alt={english}
-          onClick={clickPicture}
-        />
+      <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '')}>
+        {sampleImg}
       </Badge>
     </CSSTransition>
   );

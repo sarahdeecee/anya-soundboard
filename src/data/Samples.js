@@ -153,6 +153,83 @@ const samples = [
     file: '../../04-hyakutenmanten.mp3',
     picture: '../../04-hyakutenmanten.png'
   },
+  // 0:38
+  { english: 'I just stepped in poop...',
+    romaji: 'アーニャ、ウンコ踏んだ…',
+    japanese: 'anya, unko funda...',
+    episode: '5',
+    file: '../../05-unko.mp3',
+    picture: '../../05-unko.png'
+  },
+  // 3:05
+  { english: 'Because I stepped in poop...!',
+    romaji: 'anya ga unko funda kara',
+    japanese: 'アーニャがウンコ踏んだから',
+    episode: '5',
+    file: '../../05-unko2.mp3',
+    picture: '../../05-unko2.png'
+  },
+  // 5:40
+  { english: 'Anya will pass...!',
+    romaji: 'anya goukaku',
+    japanese: 'アーニャ合格',
+    episode: '5',
+    file: '../../05-goukaku.mp3',
+    picture: '../../05-goukaku.png'
+  },
+  // 6:24
+  { english: 'I did it!',
+    romaji: 'yatta!',
+    japanese: 'やった！',
+    episode: '5',
+    file: '../../05-yatta.mp3',
+    picture: '../../05-yatta.png'
+  },
+  { english: 'I\'m sad',
+    romaji: 'anya, shonbori',
+    japanese: 'アーニャしょんぼり',
+    episode: '5',
+    file: '../../05-.mp3',
+    picture: '../../05-.png'
+  },
+  // 13:24
+  { english: 'Anything',
+    romaji: 'nandemo ii',
+    japanese: '何でもいい',
+    episode: '5',
+    file: '../../05-nandemoii.mp3',
+    picture: '../../05-nandemoii.png'
+  },
+  // 15:00
+  { english: 'Nope!',
+    romaji: 'buu',
+    japanese: 'ブー',
+    episode: '5',
+    file: '../../05-.mp3',
+    picture: '../../05-.png'
+  },
+  { english: 'I wanna see~',
+    romaji: 'anya, mitai na~',
+    japanese: 'アーニャ、見たいなぁ〜',
+    episode: '5',
+    file: '../../05-.mp3',
+    picture: '../../05-.png'
+  },
+  { english: 'I wanna see Loidman~',
+    romaji: 'kanpeki na Loidman, mitai na~',
+    japanese: '',
+    episode: '5',
+    file: '../../05-.mp3',
+    picture: '../../05-.png'
+  },
+  // 9:21
+  { english: 'Save me, Loidman~',
+    romaji: 'tasukete Loidman~',
+    japanese: '',
+    episode: '5',
+    file: '../../05-.mp3',
+    picture: '../../05-.png'
+  },
   { english: 'Haba nice day',
     romaji: 'iterasai',
     japanese: 'いてらさい',
