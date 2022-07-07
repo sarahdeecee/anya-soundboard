@@ -27,13 +27,20 @@ const samples = [
     file: '../../01-peanuts.mp3',
     picture: '../../01-peanuts.png'
   },
-  // { english: 'So exciting!',
-  //   romaji: 'wa~kuwaku',
-  //   japanese: 'ワ〜クワク',
-  //   episode: '1',
-  //   file: '../../wakuwaku2.mp3',
-  //   picture: '../../wakuwaku2.png'
-  // },
+  { english: 'I don\'t wanna!!',
+    romaji: 'iyadaaaa!!',
+    japanese: 'いやだぁー！！',
+    episode: '1',
+    file: '../../01-yada.mp3',
+    picture: '../../01-yada.png'
+  },
+  { english: 'Wah!',
+    romaji: 'wah!',
+    japanese: 'わっ！',
+    episode: '1',
+    file: '../../01-wah.mp3',
+    picture: '../../01-wah.png'
+  },
   { english: 'I\'m getting sold off!',
     romaji: 'Anya, uritobasareru!',
     japanese: 'アーニャ、売り飛ばされる〜！',
@@ -69,13 +76,6 @@ const samples = [
     file: '../../02-hahanosonzaikoishii.mp3',
     picture: '../../02-hahanosonzaikoishii.png'
   },
-  // { english: 'K',
-  //   romaji: 'ui',
-  //   japanese: 'うい',
-  //   episode: '2',
-  //   file: '../../ui2.mp3',
-  //   picture: '../../ui2.png'
-  // },
   { english: 'Stock on them peanuts!',
     romaji: 'peanuts kaikondoke!',
     japanese: 'ピーナッツ買い込んどけ！',
