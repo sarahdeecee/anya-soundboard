@@ -4,7 +4,9 @@ function EpisodePicker(props) {
   const {checked, setChecked, onClose, setSample} = props;
 
   const numberOfEpisodes = [1, 2, 3,
-    // 4, 5, 6, 7, 8, 9, 10, 11, 12
+    // 4, 5, 
+    6, 
+    // 7, 8, 9, 10, 11, 12
   ];
 
   const handleCheck = (e) => {
@@ -17,7 +19,7 @@ function EpisodePicker(props) {
       3: false,
       // 4: false,
       // 5: false,
-      // 6: false,
+      6: false,
       // 7: false,
       // 8: false,
       // 9: false,
@@ -32,7 +34,7 @@ function EpisodePicker(props) {
         3: true,
         // 4: true,
         // 5: true,
-        // 6: true,
+        6: true,
         // 7: true,
         // 8: true,
         // 9: true,
