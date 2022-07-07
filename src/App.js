@@ -76,7 +76,7 @@ function App() {
         Choose Episodes
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
-        <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} />
+        <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} sample={sample} setSample={setSample} />
       </Dialog>
       <DrumMachine sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
       {isSamplesEmpty && "No episodes selected!"}

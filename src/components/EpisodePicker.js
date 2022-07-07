@@ -1,7 +1,7 @@
 import { Checkbox, FormControlLabel, Button, DialogTitle, DialogActions, DialogContent, Grid } from "@mui/material";
 
 function EpisodePicker(props) {
-  const {checked, setChecked, onClose} = props;
+  const {checked, setChecked, onClose, setSample} = props;
 
   const numberOfEpisodes = [1, 2, 3,
     // 4, 5, 6, 7, 8, 9, 10, 11, 12
@@ -11,9 +11,8 @@ function EpisodePicker(props) {
     setChecked({...checked, [e.target.value]: e.target.checked});
   };
   const handleCheckAll = (e) => {
-    console.log('checked',e.target.checked);
-    console.log('indeterminate',e.target.indeterminate);
-    Object.values(checked).includes(true) ? setChecked({1: false,
+    if (Object.values(checked).includes(true)) {
+     setChecked({1: false,
       2: false,
       3: false,
       // 4: false,
@@ -25,8 +24,10 @@ function EpisodePicker(props) {
       // 10: false,
       // 11: false,
       // 12: false
-    })
-      : setChecked({1: true,
+      });
+      setSample({});
+    } else {
+      setChecked({1: true,
         2: true,
         3: true,
         // 4: true,
@@ -39,6 +40,7 @@ function EpisodePicker(props) {
         // 11: true,
         // 12: true,
       });
+    }
   };
   
   const episodeList = numberOfEpisodes.map((episode) => <Grid item>
