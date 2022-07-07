@@ -146,6 +146,20 @@ const samples = [
     file: '../../04-daijoubumasu.mp3',
     picture: '../../04-daijoubumasu.png'
   },
+  { english: 'She\'s very nice.',
+    romaji: 'tottemo yasashii desu',
+    japanese: 'とっても優しいです',
+    episode: '4',
+    file: '../../04-yasashiidesu.mp3',
+    picture: '../../04-yasashiidesu.png'
+  },
+  { english: 'But sometimes she\'s scary.',
+    romaji: 'demo tama ni okkanai desu',
+    japanese: 'でもたまにおっかいないです',
+    episode: '4',
+    file: '../../04-okkanaidesu.mp3',
+    picture: '../../04-okkanaidesu.png'
+  },
   { english: 'A perfect 100!',
     romaji: 'hyakuten manten desu!',
     japanese: '百点満点です！',
@@ -222,9 +236,9 @@ const samples = [
     file: '../../06-anyakawaii.mp3',
     picture: '../../06-anyakawaii.png'
   },
-  { english: 'Do dodo do dodo do dodo',
+  { english: 'Do dodo do dodo do dodo do dodo',
     romaji: 'run run run run run run',
-    japanese: 'るんるんるんるんるん',
+    japanese: 'るんるん るんるん るんるん',
     episode: '6',
     file: '../../06-runrun.mp3',
     picture: '../../06-runrun.png'
