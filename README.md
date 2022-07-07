@@ -31,6 +31,7 @@ This app also features light and dark modes and a responsive layout.
 - Responsive and mobile layouts
 
 **Version 1.1.0**
+- Updated mobile view
 - Samples from episode 3 to 6 added
 - Japanese text added
 - Adaptive keypress function to optimize which keys are assigned to samples
