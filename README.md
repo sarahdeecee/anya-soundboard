@@ -23,6 +23,18 @@ This app also features light and dark modes and a responsive layout.
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 - [React Transition Group](https://reactcommunity.org/react-transition-group/)
 
+## Versions
+
+**Version 1.0.0**
+- Samples from episodes 1 and 2
+- Light and dark modes
+- Responsive and mobile layouts
+
+**Version 1.1.0**
+- Samples from episode 3 to 6 added
+- Japanese text added
+- Adaptive keypress function to optimize which keys are assigned to samples
+
 ## Future Plans
 - More samples
 - Choose samples for customized soundboard
