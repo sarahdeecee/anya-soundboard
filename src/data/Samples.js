@@ -28,8 +28,8 @@ const samples = [
     picture: '../../01-peanuts.png'
   },
   { english: 'I don\'t wanna!!',
-    romaji: 'iyadaaaa!!',
-    japanese: 'いやだぁー！！',
+    romaji: 'iyaaaadaaaa!!',
+    japanese: 'いや〜だぁー！！',
     episode: '1',
     file: '../../01-yada.mp3',
     picture: '../../01-yada.png'
