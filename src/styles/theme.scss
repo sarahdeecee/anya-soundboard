@@ -4,6 +4,7 @@
   --theme-border: #fff;
   --theme-accent-light: #FFB3AF;
   --theme-accent-dark: #A76562;
+  --theme-button-hover: #EBA5A1;
 }
 
 .dark {
@@ -12,6 +13,7 @@
   --theme-border: #487962;
   --theme-accent-light: #487962;
   --theme-accent-dark: #1d2720;
+  --theme-button-hover: #41705B;
 }
 
 .App {
@@ -35,7 +37,7 @@ span.MuiBadge-colorSecondary {
   border-color: var(--theme-accent-dark);
 }
 #episode-picker-btn:hover {
-  background-color: var(--theme-page-background);
+  background-color: var(--theme-button-hover);
 }
 
 img {
