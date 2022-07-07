@@ -2,7 +2,7 @@ import './App.css';
 import './styles/theme.scss';
 import addKeypress from './data/helpers/AddKeypress';
 import samples from './data/Samples.js';
-import DrumMachine from './components/DrumMachine';
+import SampleBoard from './components/SampleBoard';
 import Menu from './components/Menu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
@@ -78,7 +78,7 @@ function App() {
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} sample={sample} setSample={setSample} />
       </Dialog>
-      <DrumMachine sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
+      <SampleBoard sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
       {isSamplesEmpty && "No episodes selected!"}
     </div>
   );

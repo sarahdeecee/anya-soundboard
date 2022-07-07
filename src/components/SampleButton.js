@@ -1,7 +1,7 @@
 import { Badge } from "@mui/material";
 import { CSSTransition } from "react-transition-group";
 
-function DrumPad(props) {
+function SampleButton(props) {
   const {english, romaji, japanese, keypress, file, picture, showTransition, setShowTransition} = props;
   const {playAudio, setSample} = props;
   const sample = {english, romaji, japanese, keypress, file, picture};
@@ -27,4 +27,4 @@ function DrumPad(props) {
   );
 }
 
-export default DrumPad;
+export default SampleButton;

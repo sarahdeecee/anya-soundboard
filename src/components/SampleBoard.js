@@ -1,11 +1,11 @@
 import { Grid, Typography } from "@mui/material";
-import DrumPad from "./DrumPad";
+import SampleButton from "./SampleButton";
 import Display from "./Display";
 
-function DrumMachine(props) {
+function SampleBoard(props) {
   const {sample, setSample, playAudio, samples, theme, showTransition, setShowTransition} = props;
   
-  const drumPads = samples.map(sample => 
+  const sampleButtons = samples.map(sample => 
       <Grid container item
         xs={4} md={3} lg={2}
         wrap="nowrap"
@@ -13,7 +13,7 @@ function DrumMachine(props) {
         key={sample.english}
         className="drum-pad">
         <Grid item>
-          <DrumPad
+          <SampleButton
             key={`pad-${sample.keypress}`}
             {...sample} 
             playAudio={playAudio}
@@ -37,10 +37,10 @@ function DrumMachine(props) {
     <div className="drum-machine" tabIndex={0}>
       <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
       <Grid container spacing={{xs: 1, sm: 2}} xs={12}>
-        {drumPads}
+        {sampleButtons}
       </Grid>
     </div>
   );
 }
 
-export default DrumMachine;
+export default SampleBoard;
