@@ -222,9 +222,9 @@ const samples = [
     file: '../../06-anyakawaii.mp3',
     picture: '../../06-anyakawaii.png'
   },
-  { english: 'Do dodo do dodo',
-    romaji: 'run run run run',
-    japanese: 'るんるんるんるん',
+  { english: 'Do dodo do dodo do dodo',
+    romaji: 'run run run run run run',
+    japanese: 'るんるんるんるんるん',
     episode: '6',
     file: '../../06-runrun.mp3',
     picture: '../../06-runrun.png'
@@ -250,7 +250,6 @@ const samples = [
     file: '../../06-sei.mp3',
     picture: '../../06-sei.png'
   },
-  
 ];
 
 export default samples;

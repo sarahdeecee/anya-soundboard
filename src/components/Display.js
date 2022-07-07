@@ -11,7 +11,7 @@ function Display(props) {
           node.addEventListener("transitionend", done, false);
         }}
         >
-        <Typography variant="h3" component="h1" id="display">{sample.english ? sample[theme.language] : ''}</Typography>
+        <Typography variant={sample.english ? 'h3' : 'h5'} component="h1" id="display" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{sample.english ? sample[theme.language] : 'Click an image below or press the corresponding key to hear the sample.'}</Typography>
       </CSSTransition>
     </SwitchTransition>
   );
