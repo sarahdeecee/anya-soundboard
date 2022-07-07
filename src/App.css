@@ -54,6 +54,9 @@ span.MuiBadge-colorSecondary {
   .menu-group {
     justify-content: center;
   }
+  span.MuiBadge-colorSecondary {
+    display: none;
+  }
 }
 
 /* Transition classes  */
