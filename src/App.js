@@ -72,9 +72,11 @@ function App() {
     new Audio(url).play();
   }
 
-  // Handle play audio on keypress
+  // Handle play audio on keypress (play selectedSamples or samples based on mode)
   const handleKeyPress = e => {
-    const filteredSample = selectedSamplesFull.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
+    const filteredSample = (mode === 'faves') ? selectedSamplesFull.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase())
+      : (mode === 'play') ? samples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase())
+        : '';
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
       setSample(filteredSample);
