@@ -1,4 +1,5 @@
 import { Checkbox, FormControlLabel, Button, DialogTitle, DialogActions, DialogContent, Grid } from "@mui/material";
+import sampleData from "../data/Samples";
 
 function EpisodePicker(props) {
   const {checked, setChecked, onClose, setSample, theme} = props;
@@ -6,7 +7,7 @@ function EpisodePicker(props) {
   const numberOfEpisodes = [1, 2, 3, 4, 5, 6, 
     // 7, 8, 9, 10, 11, 12
   ];
-
+  // (sampleData).filter(sample => )
   const handleCheck = (e) => {
     setChecked({...checked, [e.target.value]: e.target.checked});
   };
@@ -18,12 +19,12 @@ function EpisodePicker(props) {
       4: false,
       5: false,
       6: false,
-      // 7: false,
-      // 8: false,
-      // 9: false,
-      // 10: false,
-      // 11: false,
-      // 12: false
+      7: false,
+      8: false,
+      9: false,
+      10: false,
+      11: false,
+      12: false
       });
       setSample({});
     } else {
@@ -33,12 +34,12 @@ function EpisodePicker(props) {
         4: true,
         5: true,
         6: true,
-        // 7: true,
-        // 8: true,
-        // 9: true,
-        // 10: true,
-        // 11: true,
-        // 12: true,
+        7: true,
+        8: true,
+        9: true,
+        10: true,
+        11: true,
+        12: true,
       });
     }
   };
