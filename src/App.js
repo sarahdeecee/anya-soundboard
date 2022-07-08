@@ -8,6 +8,7 @@ import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
 import { Button, Dialog } from "@mui/material";
 import { useReducer, useState } from "react";
+import SampleSelection from './components/SampleSelection';
 
 function App() {
   const [sample, setSample] = useState({});
@@ -45,6 +46,8 @@ function App() {
         const update = [...state];
         update.splice(update.indexOf(action.sample), 1);
         return update;
+      case 'clear':
+        return [];
       default:
         return state;
     }
@@ -85,6 +88,9 @@ function App() {
   const handleMode = () => {
     (mode === 'play') ? setMode('select') : setMode('play');
   }
+  const handleSampleClear = () => {
+    setSelectedSamples({sample, type: 'clear'});
+  }
 
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
@@ -102,6 +108,11 @@ function App() {
       sx={{mt: 2}}>
         {(mode === 'play') ? selectSampleText : selectPlayText}
       </Button>
+      <Button variant="outlined" className={theme.mode} onClick={handleSampleClear}
+      sx={{mt: 2}}>
+        Clear Samples
+      </Button>
+      <SampleSelection samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} theme={theme} />
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
       </Dialog>
