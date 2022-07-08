@@ -35,7 +35,7 @@ function SampleSelection(props) {
     </Grid>
   );
   
-  return (<Grid container sx={{width: '100%'}}>
+  return (<Grid container sx={{width: '100%'}} spacing={{xs: 1, sm: 2}}>
     {parsedSamples}
     </Grid>
   );
