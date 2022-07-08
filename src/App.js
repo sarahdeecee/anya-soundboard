@@ -12,7 +12,7 @@ import SampleSelector from './components/SampleSelector';
 
 function App() {
   const [sample, setSample] = useState({});
-  const [samples, setSamples] = useState(sampleData);
+  const [samples, setSamples] = useState(addKeypress(sampleData));
   const [theme, setTheme] = useState({
     mode: 'light',
     language: 'english'
@@ -62,10 +62,11 @@ function App() {
   // Select samples from episodes and add associated keys
   const setSamplesFromEpisodesFull = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
 
-  const selectedSamplesFull = selectedSamples ? addKeypress(selectedSamples.map(sampleEnglish =>
+  // If selected samples has any samples (based on English value), add keypress and other keys
+  const selectedSamplesFull = selectedSamples.length ? addKeypress(selectedSamples.map(sampleEnglish =>
     sampleData.find(sample => sample.english === sampleEnglish)
     ))
-    : addKeypress(sampleData);
+    : [];
 
   const playAudio = (url) => {
     new Audio(url).play();
