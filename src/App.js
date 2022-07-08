@@ -96,7 +96,7 @@ function App() {
         {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
       </Button>
       <SampleSelector theme={theme} mode={mode} setMode={setMode} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} />
-      <SampleSelection samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} theme={theme} />
+      {/* <SampleSelection samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} theme={theme} /> */}
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
       </Dialog>
