@@ -64,7 +64,7 @@ function App() {
 
   // If selected samples has any samples (based on English value), add keypress and other keys
   const selectedSamplesFull = selectedSamples.length ? addKeypress(selectedSamples.map(sampleEnglish =>
-    sampleData.find(sample => sample.english === sampleEnglish)
+    setSamplesFromEpisodesFull.find(sample => sample.english === sampleEnglish)
     ))
     : [];
 
@@ -75,7 +75,7 @@ function App() {
   // Handle play audio on keypress (play selectedSamples or samples based on mode)
   const handleKeyPress = e => {
     const filteredSample = (mode === 'faves') ? selectedSamplesFull.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase())
-      : (mode === 'play') ? samples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase())
+      : (mode === 'play') ? setSamplesFromEpisodesFull.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase())
         : '';
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
