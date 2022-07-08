@@ -222,6 +222,14 @@ const sampleData = [
     file: '../../05-tasukete.mp3',
     picture: '../../05-tasukete.png'
   },
+  // 2:13
+  { english: 'Fank you very please',
+    romaji: 'azazamasu',
+    japanese: 'あざざます！',
+    episode: '6',
+    file: '../../06-azazamasu.mp3',
+    picture: '../../06-azazamasu.png'
+  },
   { english: 'Haba nice day',
     romaji: 'iterasai',
     japanese: 'いてらさい',
@@ -243,26 +251,44 @@ const sampleData = [
     file: '../../06-runrun.mp3',
     picture: '../../06-runrun.png'
   },
-  { english: 'There, there',
-    romaji: 'yoshiyoshi',
-    japanese: 'よしよし',
+  // { english: 'There, there',
+  //   romaji: 'yoshiyoshi',
+  //   japanese: 'よしよし',
+  //   episode: '6',
+  //   file: '../../06-yoshiyoshi.mp3',
+  //   picture: '../../06-yoshiyoshi.png'
+  // },
+  // { english: 'Killer punch, kapow!',
+  //   romaji: 'hissatsu panchi pokan!',
+  //   japanese: '必殺パンチ　ポカーン！',
+  //   episode: '6',
+  //   file: '../../06-hissatsu.mp3',
+  //   picture: '../../06-hissatsu.png'
+  // },
+  // { english: 'Hah!',
+  //   romaji: 'sei!',
+  //   japanese: 'せい！',
+  //   episode: '6',
+  //   file: '../../06-sei.mp3',
+  //   picture: '../../06-sei.png'
+  // },
+  // 16:15
+  { english: 'Okie dokie!',
+    romaji: 'ookii dookii',
+    japanese: 'オーキードーキー！',
     episode: '6',
-    file: '../../06-yoshiyoshi.mp3',
-    picture: '../../06-yoshiyoshi.png'
+    file: '../../06-okiedokie.mp3',
+    picture: '../../06-okiedokie.png'
   },
-  { english: 'Killer punch, kapow!',
-    romaji: 'hissatsu panchi pokan!',
-    japanese: '必殺パンチ　ポカーン！',
+  // 17:25 ninmu no tame Anya gaman
+  // 18:18 heh
+  // 20:13 Anya ga yatta shouko an no ka
+  { english: 'You got any proof it was me?',
+    romaji: 'anya ga yatta shouko an no ka',
+    japanese: 'アーニャがやった証拠あんのか？',
     episode: '6',
-    file: '../../06-hissatsu.mp3',
-    picture: '../../06-hissatsu.png'
-  },
-  { english: 'Hah!',
-    romaji: 'sei!',
-    japanese: 'せい！',
-    episode: '6',
-    file: '../../06-sei.mp3',
-    picture: '../../06-sei.png'
+    file: '../../06-shouko.mp3',
+    picture: '../../06-shouko.png'
   },
 ];
 

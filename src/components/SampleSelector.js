@@ -1,8 +1,7 @@
 import { Box, Button } from "@mui/material";
-import addKeypress from "../data/helpers/AddKeypress";
 
 function SampleSelector(props) {
-  const {theme, mode, setMode, sample, samples, setSamples, selectedSamples, setSelectedSamples} = props;
+  const {theme, mode, setMode, sample, setSelectedSamples} = props;
 
   const handleMode = () => {
     (mode === 'play') ? setMode('select') : setMode('play');

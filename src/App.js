@@ -12,7 +12,6 @@ import SampleSelector from './components/SampleSelector';
 
 function App() {
   const [sample, setSample] = useState({});
-  const [samples, setSamples] = useState(addKeypress(sampleData));
   const [theme, setTheme] = useState({
     mode: 'light',
     language: 'english'
@@ -28,15 +27,17 @@ function App() {
     4: true,
     5: true,
     6: true,
-    // 7: true,
-    // 8: true,
-    // 9: true,
-    // 10: true,
-    // 11: true,
-    // 12: true,
+    7: true,
+    8: true,
+    9: true,
+    10: true,
+    11: true,
+    12: true,
   });
   const [openEpisodePicker, setOpenEpisodePicker] = useState(false);
   const [mode, setMode] = useState('play');
+
+  const samples = addKeypress(sampleData);
   
   // Sample selection
   const sampleReducer = (state, action) => {
