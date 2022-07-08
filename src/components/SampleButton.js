@@ -2,7 +2,7 @@ import { Badge } from "@mui/material";
 import { CSSTransition } from "react-transition-group";
 
 function SampleButton(props) {
-  const {english, romaji, japanese, keypress, file, picture, showTransition, setShowTransition} = props;
+  const {english, romaji, japanese, keypress, file, picture, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode} = props;
   const {playAudio, setSample} = props;
   const sample = {english, romaji, japanese, keypress, file, picture};
 
@@ -12,12 +12,23 @@ function SampleButton(props) {
     setShowTransition({...showTransition, display: !showTransition.display});
   }
 
+  const addSample = sample => {
+    setSelectedSamples({sample, type: 'add'});
+  }
+  const removeSample = sample => {
+    setSelectedSamples({sample, type: 'remove'});
+  }
+
+  const handleSample = () => {
+    (selectedSamples.includes(english)) ? removeSample(english) : addSample(english);
+  }
+
   const sampleImg = <img 
     id={keypress}
     src={picture}
     srcSet={picture}
     alt={english}
-    onClick={clickPicture}
+    onClick={(mode === 'play') ? clickPicture : handleSample}
   />
   
   return (

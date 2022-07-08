@@ -31,12 +31,12 @@ span.MuiBadge-colorSecondary {
   color: var(--theme-accent-dark);
 }
 
-#episode-picker-btn {
+#episode-picker-btn, #sample-picker-btn {
   color: var(--theme-color);
   background-color: var(--theme-accent-light);
   border-color: var(--theme-accent-dark);
 }
-#episode-picker-btn:hover {
+#episode-picker-btn:hover, #sample-picker-btn:hover {
   background-color: var(--theme-button-hover);
 }
 

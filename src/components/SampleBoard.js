@@ -3,7 +3,7 @@ import SampleButton from "./SampleButton";
 import Display from "./Display";
 
 function SampleBoard(props) {
-  const {sample, setSample, playAudio, samples, theme, showTransition, setShowTransition} = props;
+  const {sample, setSample, playAudio, samples, theme, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode} = props;
   
   const sampleButtons = samples.map(sample => 
       <Grid container item
@@ -20,6 +20,9 @@ function SampleBoard(props) {
             setSample={setSample}
             showTransition={showTransition}
             setShowTransition={setShowTransition}
+            selectedSamples={selectedSamples}
+            setSelectedSamples={setSelectedSamples}
+            mode={mode}
           />
         </Grid>
         <Grid item xs={12} sx={{maxWidth: '200px', overflow: "hidden", textOverflow: "ellipsis"}}>

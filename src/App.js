@@ -7,7 +7,7 @@ import Menu from './components/Menu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
 import { Button, Dialog } from "@mui/material";
-import { useState } from "react";
+import { useReducer, useState } from "react";
 
 function App() {
   const [sample, setSample] = useState({});
@@ -34,12 +34,29 @@ function App() {
     // 12: true,
   });
   const [openEpisodePicker, setOpenEpisodePicker] = useState(false);
+  const [mode, setMode] = useState('play');
+  
+  // Sample selection
+  const sampleReducer = (state, action) => {
+    switch (action.type) {
+      case 'add':
+        return [...state, action.sample];
+      case 'remove':
+        const update = [...state];
+        update.splice(update.indexOf(action.sample), 1);
+        return update;
+      default:
+        return state;
+    }
+  };
+
+  const [selectedSamples, setSelectedSamples] = useReducer(sampleReducer, []);
 
   // Create array of selected episodes
   const selectedEpisodes = Object.keys(Object.fromEntries(Object.entries(checked).filter(([episode, value]) => value === true)));
   
   // Select samples from episodes and add associated keys
-  const selectedSamples = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
+  const setSamples = addKeypress(samples.filter(sample => selectedEpisodes.includes(sample.episode)));
 
   const playAudio = (url) => {
     new Audio(url).play();
@@ -47,7 +64,7 @@ function App() {
 
   // Handle play audio on keypress
   const handleKeyPress = e => {
-    const filteredSample = selectedSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
+    const filteredSample = setSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
       setSample(filteredSample);
@@ -65,6 +82,10 @@ function App() {
     setOpenEpisodePicker(false);
   };
 
+  const handleMode = () => {
+    (mode === 'play') ? setMode('select') : setMode('play');
+  }
+
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
   return (
@@ -74,10 +95,14 @@ function App() {
       sx={{mt: 2}}>
         {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
       </Button>
+      <Button id="sample-picker-btn" variant="outlined" className={theme.mode} onClick={handleMode}
+      sx={{mt: 2}}>
+        {(mode === 'play') ? 'Select Samples' : 'Play Samples'}
+      </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} sample={sample} setSample={setSample} />
       </Dialog>
-      <SampleBoard sample={sample} setSample={setSample} samples={selectedSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
+      <SampleBoard sample={sample} setSample={setSample} samples={setSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
       {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
     </div>
   );
