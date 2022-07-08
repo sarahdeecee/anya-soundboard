@@ -2,8 +2,7 @@ import { Typography } from '@mui/material';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 function Display(props) {
   const {english, romaji, japanese, theme, showTransition } = props;
-  const sample = {english, romaji, japanese};
-  const noSampleYet = (new Boolean(english)).valueOf();
+  const noSampleYet = (Boolean(english)).valueOf();
   const displayEnglish = noSampleYet ? english : 'Click an image below or press the corresponding key to hear the sample.';
   const displayJapanese = noSampleYet ? japanese : '下の画像をクリックし（または画像に応じたキーを押して）、音が出ます。';
   const displayRomaji = noSampleYet ? romaji : 'Click an image below or press the corresponding key to hear the sample.';
