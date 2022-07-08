@@ -18,7 +18,7 @@ function SampleSelector(props) {
   }
 
   const selectSampleText = (theme.language === 'japanese') ? 'サンプル選択' : 'Select Samples';
-  const selectPlayText = (theme.language === 'japanese') ? 'キャンセル' : 'Save Favourites';
+  const selectPlayText = (theme.language === 'japanese') ? '保存する' : 'Save Favourites';
 
   return (
     <Box>
@@ -30,15 +30,15 @@ function SampleSelector(props) {
       </Button>
       {(mode === 'select') && <Button id="sample-clear-btn" variant="outlined" className={theme.mode} onClick={handleSampleClear}
       sx={{mt: 2}}>
-        Clear Samples
+        {(theme.language === 'japanese') ? 'クリア' : 'Clear Samples'}
       </Button>}
       {(mode === 'faves') && <Button id="faves-btn" variant="outlined" className={theme.mode} onClick={handleSampleSetEdit}
       sx={{mt: 2}}>
-        Edit Favourites
+        {(theme.language === 'japanese') ? 'エディット' : 'Edit Favourites'}
       </Button>}
       {(mode !== 'faves') && <Button id="faves-btn" variant="outlined" className={theme.mode} onClick={handleSampleSet}
       sx={{mt: 2}}>
-        Play Favourites
+        {(theme.language === 'japanese') ? 'プレイ' : 'Play Favourites'}
       </Button>}
     </Box>
   );
