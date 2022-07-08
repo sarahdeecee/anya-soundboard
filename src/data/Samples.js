@@ -236,7 +236,7 @@ const samples = [
     file: '../../06-anyakawaii.mp3',
     picture: '../../06-anyakawaii.png'
   },
-  { english: 'Do dodo do dodo do dodo do dodo',
+  { english: 'Do dodo do dodo do dodo',
     romaji: 'run run run run run run',
     japanese: 'るんるん るんるん るんるん',
     episode: '6',
