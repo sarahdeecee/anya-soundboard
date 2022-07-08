@@ -1,4 +1,4 @@
-import { Badge } from "@mui/material";
+import { Badge, ButtonBase } from "@mui/material";
 import { CSSTransition } from "react-transition-group";
 
 function SampleButton(props) {
@@ -33,9 +33,11 @@ function SampleButton(props) {
   
   return (
     <CSSTransition timeout={50}>
+      <ButtonBase sx={{borderRadius: '10px'}}>
       <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '')}>
         {sampleImg}
       </Badge>
+      </ButtonBase>
     </CSSTransition>
   );
 }
