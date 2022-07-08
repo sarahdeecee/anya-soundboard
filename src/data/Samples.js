@@ -290,6 +290,54 @@ const sampleData = [
     file: '../../06-shouko.mp3',
     picture: '../../06-shouko.png'
   },
+  // 8:54 kami-sama...?
+  { english: 'Is that you, God...?',
+    romaji: 'kami-sama...?',
+    japanese: '神様…？',
+    episode: '7',
+    file: '../../07-kamisama.mp3',
+    picture: '../../07-kamisama.png'
+  },
+  // 9:04 nanka sugoi puressha kanjiru
+  { english: 'I can feel an immense pressure...',
+    romaji: 'nanka sugoi puressha kanjiru',
+    japanese: 'なんかすごいプレッシャー感じる',
+    episode: '7',
+    file: '../../07-pressure.mp3',
+    picture: '../../07-pressure.png'
+  },
+  // 12:19 gomennasai, anya tansoku de
+  { english: 'I\'m sorry I have stubby legs...',
+    romaji: 'gomennasai, anya tansoku de',
+    japanese: 'ごめんなさい、アーニャ短足で',
+    episode: '7',
+    file: '../../07-tansoku.mp3',
+    picture: '../../07-tansoku.png'
+  },
+  // 13:50 gakkou kowai... bekkii...
+  { english: 'School is scary... Becky...',
+    romaji: 'gakkou kowai... bekkii...',
+    japanese: '学校怖い…ベッキー…',
+    episode: '7',
+    file: '../../07-gakkoukowai.mp3',
+    picture: '../../07-gakkoukowai.png'
+  },
+  // 15:38 benkyou iya
+  { english: 'I hate studying!!',
+    romaji: 'benkyou iya',
+    japanese: '勉強いやぁー！！',
+    episode: '7',
+    file: '../../07-benkyouiya.mp3',
+    picture: '../../07-benkyouiya.png'
+  },
+  // 21:22 haha... chichi wo koroshite wa dame...
+  { english: 'No, mama... you can\'t kill papa...',
+    romaji: 'haha... chichi wo koroshite wa dame...',
+    japanese: '母…父を殺してはダメ…',
+    episode: '7',
+    file: '../../07-koroshitewadame.mp3',
+    picture: '../../07-koroshitewadame.png'
+  },
 ];
 
 export default sampleData;
