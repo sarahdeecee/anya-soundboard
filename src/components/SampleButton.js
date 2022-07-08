@@ -28,13 +28,14 @@ function SampleButton(props) {
     src={picture}
     srcSet={picture}
     alt={english}
+    className={(mode === 'select' && !selectedSamples.includes(english)) ? mode : ''}
     onClick={(mode === 'play') ? clickPicture : handleSample}
   />
   
   return (
     <CSSTransition timeout={50}>
       <ButtonBase sx={{borderRadius: '10px'}}>
-      <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '')}>
+      <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '') || (mode === 'select')}>
         {sampleImg}
       </Badge>
       </ButtonBase>

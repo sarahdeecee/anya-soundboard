@@ -9,6 +9,7 @@ import useEventListener from './hooks/useKeyPress';
 import { Button, Dialog } from "@mui/material";
 import { useReducer, useState } from "react";
 import SampleSelection from './components/SampleSelection';
+import SampleSelector from './components/SampleSelector';
 
 function App() {
   const [sample, setSample] = useState({});
@@ -84,18 +85,8 @@ function App() {
   const handleCloseEpisodes = () => {
     setOpenEpisodePicker(false);
   };
-
-  const handleMode = () => {
-    (mode === 'play') ? setMode('select') : setMode('play');
-  }
-  const handleSampleClear = () => {
-    setSelectedSamples({sample, type: 'clear'});
-  }
-
+  
   const isSamplesEmpty = !Object.values(checked).includes(true);
-
-  const selectSampleText = (theme.language === 'japanese') ? 'サンプル選択' : 'Select Samples';
-  const selectPlayText = (theme.language === 'japanese') ? 'サンプルを聴く' : 'Play Samples';
 
   return (
     <div className={`App ${theme.mode}`}>
@@ -104,14 +95,7 @@ function App() {
       sx={{mt: 2}}>
         {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
       </Button>
-      <Button id="sample-picker-btn" variant="outlined" className={theme.mode} onClick={handleMode}
-      sx={{mt: 2}}>
-        {(mode === 'play') ? selectSampleText : selectPlayText}
-      </Button>
-      <Button variant="outlined" className={theme.mode} onClick={handleSampleClear}
-      sx={{mt: 2}}>
-        Clear Samples
-      </Button>
+      <SampleSelector theme={theme} mode={mode} setMode={setMode} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} />
       <SampleSelection samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} theme={theme} />
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
         <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
