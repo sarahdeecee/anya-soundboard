@@ -13,25 +13,33 @@ function SampleSelector(props) {
   const handleSampleSet = () => {
     setMode('faves');
   }
+  const handleSampleSetEdit = () => {
+    setMode('select');
+  }
 
   const selectSampleText = (theme.language === 'japanese') ? 'サンプル選択' : 'Select Samples';
-  const selectPlayText = (theme.language === 'japanese') ? 'キャンセル' : 'Cancel';
+  const selectPlayText = (theme.language === 'japanese') ? 'キャンセル' : 'Save Favourites';
 
   return (
     <Box>
       <Button id="sample-picker-btn" variant="outlined" className={theme.mode} onClick={handleMode}
         sx={{mt: 2}}
       >
-        {(mode === 'play') ? selectSampleText : selectPlayText}
+        {(mode === 'play') ? selectSampleText : 
+          (mode === 'faves') ? 'Back to Full Selection' : selectPlayText}
       </Button>
-      <Button variant="outlined" className={theme.mode} onClick={handleSampleClear}
+      {(mode === 'select') && <Button id="sample-clear-btn" variant="outlined" className={theme.mode} onClick={handleSampleClear}
       sx={{mt: 2}}>
         Clear Samples
-      </Button>
-      <Button variant="outlined" className={theme.mode} onClick={handleSampleSet}
+      </Button>}
+      {(mode === 'faves') && <Button id="faves-btn" variant="outlined" className={theme.mode} onClick={handleSampleSetEdit}
+      sx={{mt: 2}}>
+        Edit Favourites
+      </Button>}
+      {(mode !== 'faves') && <Button id="faves-btn" variant="outlined" className={theme.mode} onClick={handleSampleSet}
       sx={{mt: 2}}>
         Play Favourites
-      </Button>
+      </Button>}
     </Box>
   );
 }

@@ -19,7 +19,7 @@ function SampleButton(props) {
     setSelectedSamples({sample, type: 'remove'});
   }
 
-  const handleSample = () => {
+  const handleSampleSelection = () => {
     (selectedSamples.includes(english)) ? removeSample(english) : addSample(english);
   }
 
@@ -29,7 +29,7 @@ function SampleButton(props) {
     srcSet={picture}
     alt={english}
     className={(mode === 'select' && !selectedSamples.includes(english)) ? mode : ''}
-    onClick={(mode === 'select') ? handleSample : clickPicture}
+    onClick={(mode === 'select') ? handleSampleSelection : clickPicture}
   />
   
   return (

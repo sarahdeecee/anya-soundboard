@@ -65,7 +65,7 @@ function App() {
   const selectedSamplesFull = selectedSamples ? addKeypress(selectedSamples.map(sampleEnglish =>
     sampleData.find(sample => sample.english === sampleEnglish)
     ))
-    : [];
+    : addKeypress(sampleData);
 
   const playAudio = (url) => {
     new Audio(url).play();
@@ -73,7 +73,7 @@ function App() {
 
   // Handle play audio on keypress
   const handleKeyPress = e => {
-    const filteredSample = setSamples.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
+    const filteredSample = selectedSamplesFull.find(sample => sample.keypress.toLowerCase() === e.key.toLowerCase());
     if (filteredSample) {
       setShowTransition({...showTransition, display: !showTransition.display});
       setSample(filteredSample);
@@ -96,14 +96,16 @@ function App() {
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
-      <Button id="episode-picker-btn" variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}
-      sx={{mt: 2}}>
-        {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
-      </Button>
+      {(mode !== 'faves') && <>
+        <Button id="episode-picker-btn" variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}
+        sx={{mt: 2}}>
+          {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
+        </Button>
+        <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
+          <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
+        </Dialog>
+      </>}
       <SampleSelector theme={theme} mode={mode} setMode={setMode} samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} />
-      <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
-        <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
-      </Dialog>
       {(mode !== 'faves') && <SampleBoard sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
       {(mode === 'faves') && <SampleBoard sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
       {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
