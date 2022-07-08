@@ -1,4 +1,4 @@
-const samples = [
+const sampleData = [
   { english: 'So exciting...!',
     romaji: 'wakuwaku...!',
     japanese: 'ワクワク...!',
@@ -266,4 +266,4 @@ const samples = [
   },
 ];
 
-export default samples;
+export default sampleData;
