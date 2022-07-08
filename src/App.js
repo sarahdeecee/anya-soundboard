@@ -88,6 +88,9 @@ function App() {
 
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
+  const selectSampleText = (theme.language === 'japanese') ? 'サンプル選択' : 'Select Samples';
+  const selectPlayText = (theme.language === 'japanese') ? 'サンプルを聴く' : 'Play Samples';
+
   return (
     <div className={`App ${theme.mode}`}>
       <Menu theme={theme} setTheme={setTheme} />
@@ -97,10 +100,10 @@ function App() {
       </Button>
       <Button id="sample-picker-btn" variant="outlined" className={theme.mode} onClick={handleMode}
       sx={{mt: 2}}>
-        {(mode === 'play') ? 'Select Samples' : 'Play Samples'}
+        {(mode === 'play') ? selectSampleText : selectPlayText}
       </Button>
       <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
-        <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} sample={sample} setSample={setSample} />
+        <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
       </Dialog>
       <SampleBoard sample={sample} setSample={setSample} samples={setSamples} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
       {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}

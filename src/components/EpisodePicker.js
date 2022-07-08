@@ -1,7 +1,7 @@
 import { Checkbox, FormControlLabel, Button, DialogTitle, DialogActions, DialogContent, Grid } from "@mui/material";
 
 function EpisodePicker(props) {
-  const {checked, setChecked, onClose, setSample} = props;
+  const {checked, setChecked, onClose, setSample, theme} = props;
 
   const numberOfEpisodes = [1, 2, 3, 4, 5, 6, 
     // 7, 8, 9, 10, 11, 12
@@ -46,7 +46,7 @@ function EpisodePicker(props) {
   const episodeList = numberOfEpisodes.map((episode) => <Grid item>
       <FormControlLabel
         key={episode}
-        label={`Episode ${episode}`}
+        label={(theme.language === 'japanese') ? `第${episode}話` : `Episode ${episode}`}
         value={episode}
         control={<Checkbox checked={checked[episode]} onChange={handleCheck} />}
       />
@@ -54,7 +54,7 @@ function EpisodePicker(props) {
   );
 
   return (<>
-  <DialogTitle>Choose Episodes</DialogTitle>
+  <DialogTitle>{(theme.language === 'japanese') ? 'エピソードを選択してください' : 'Choose Episodes'}</DialogTitle>
     <DialogContent>
       <FormControlLabel
         label={!Object.values(checked).includes(true) ? 'Select All' : 'Deselect All'}
