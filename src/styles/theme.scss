@@ -45,7 +45,10 @@ img {
   border: 2px solid var(--theme-border);
 }
 
-#menu {
-  background: var(--theme-accent-light);
+#menu, button.MuiBottomNavigationAction-root {
+  background-color: var(--theme-accent-light);
   border-color: var(--theme-accent-dark);
+  .Mui-selected {
+    color: var(--theme-border);
+  }
 }

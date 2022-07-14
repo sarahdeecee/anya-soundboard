@@ -38,7 +38,6 @@ function SampleBoard(props) {
   );
   return (
     <div className="drum-machine" tabIndex={0}>
-      <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
       <Grid container spacing={{xs: 1, sm: 2}} xs={12}>
         {sampleButtons}
       </Grid>

@@ -21,14 +21,18 @@ img.select {
 }
 
 #display {
-  min-height: 4rem;
-  margin: 1rem 0;
+  min-height: 2rem;
+  margin-bottom: 1rem;
 }
 
 #menu {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+#mobile-menu {
+  display: none;
 }
 
 .drum-action, .drum-pad-subtitle {
@@ -48,21 +52,20 @@ span.MuiBadge-colorSecondary {
 
 /* Media queries */
 @media only screen and (max-width: 400px) {
-  #menu {
-    display: flex;
-    flex-direction: column;
-  }
-  #menu-divider {
+  #menu, #menu-divider, .menu-group, #sample-selector, #episode-picker-btn {
     display: none;
   }
-  .menu-group {
-    justify-content: center;
+  #mobile-menu {
+    display: flex;
   }
-  #display.MuiTypography-h3 {
+  .MuiTypography-h3 {
     font-size: x-large;
   }
   #display.MuiTypography-h5 {
     font-size: large;
+  }
+  .drum-machine {
+    margin-bottom: 3rem;
   }
   span.MuiBadge-colorSecondary {
     display: none;

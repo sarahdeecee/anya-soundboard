@@ -20,7 +20,7 @@ function SampleSelector(props) {
   const selectPlayText = (theme.language === 'japanese') ? '保存する' : 'Save Favourites';
 
   return (
-    <Box>
+    <Box id="sample-selector">
       <Button id="sample-picker-btn" variant="outlined" className={theme.mode} onClick={handleMode}
         sx={{mt: 2}}
       >
