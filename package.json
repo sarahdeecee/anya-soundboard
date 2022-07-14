@@ -4,6 +4,7 @@
   "description": "A soundboard of Anya Forger from Spy x Family",
   "private": true,
   "dependencies": {
+    "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
