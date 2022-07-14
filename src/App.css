@@ -58,6 +58,12 @@ span.MuiBadge-colorSecondary {
   .menu-group {
     justify-content: center;
   }
+  #display.MuiTypography-h3 {
+    font-size: x-large;
+  }
+  #display.MuiTypography-h5 {
+    font-size: large;
+  }
   span.MuiBadge-colorSecondary {
     display: none;
   }
