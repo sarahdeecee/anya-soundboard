@@ -12,7 +12,7 @@ function SampleBoard(props) {
         direction="column"
         key={sample.english}
         className="drum-pad">
-        <Grid item>
+        <Grid item xs={12}>
           <SampleButton
             key={`pad-${sample.keypress}`}
             {...sample} 

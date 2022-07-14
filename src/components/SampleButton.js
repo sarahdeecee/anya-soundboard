@@ -35,9 +35,9 @@ function SampleButton(props) {
   return (
     <CSSTransition timeout={50}>
       <ButtonBase sx={{borderRadius: '10px'}}>
-      <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '') || (mode === 'select')}>
-        {sampleImg}
-      </Badge>
+        <Badge color="secondary" overlap="circular" badgeContent={keypress.toUpperCase()} invisible={(keypress === '') || (mode === 'select')} sx={{width: '100%'}}>
+          {sampleImg}
+        </Badge>
       </ButtonBase>
     </CSSTransition>
   );

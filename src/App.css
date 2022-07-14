@@ -32,8 +32,8 @@ img.select {
 }
 
 .drum-action, .drum-pad-subtitle {
-  max-width: 200px;
   width: 100%;
+  max-width: 200px;
   height: 1rem;
 }
 
