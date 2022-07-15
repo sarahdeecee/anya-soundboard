@@ -52,6 +52,10 @@ span.MuiBadge-colorSecondary {
   font-size: large;
 }
 
+svg {
+  color: inherit;
+}
+
 /* Media queries */
 @media only screen and (max-width: 400px) {
   #menu, #menu-divider, .menu-group, #sample-selector, #episode-picker-btn {
