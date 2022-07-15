@@ -121,7 +121,7 @@ function App() {
       {(mode !== 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
       {(mode === 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
       {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
-      <MobileMenu theme={theme} setTheme={setTheme} handleOpenEpisodes={handleOpenEpisodes} />
+      <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
     </div>
   );
 }
