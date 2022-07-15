@@ -104,7 +104,7 @@ const sampleData = [
     file: '../../03-supponpon.mp3',
     picture: '../../03-supponpon.png'
   },
-  { english: 'Head got chopped, body got chopped',
+  { english: 'Head chopped! Body chopped!',
     romaji: 'kubi chonpa karada chonpa',
     japanese: '首チョンパ体チョンパ',
     episode: '3',
@@ -118,7 +118,7 @@ const sampleData = [
     file: '../../03-donmaichichi.mp3',
     picture: '../../03-donmaichichi.png'
   },
-  { english: 'The people are like tiny bits of trash...',
+  { english: 'They\'re like tiny bits of trash...',
     romaji: 'hito ga gomi no you da...',
     japanese: '人がゴミのようだ…',
     episode: '3',
@@ -132,7 +132,7 @@ const sampleData = [
     file: '../../04-hagechabe.mp3',
     picture: '../../04-hagechabe.png'
   },
-  { english: 'I hafta pick my nose',
+  { english: 'I really wanna pick my nose',
     romaji: 'anya, hanakuso hojiritai',
     japanese: 'アーニャ、鼻くそほじりたい',
     episode: '4',

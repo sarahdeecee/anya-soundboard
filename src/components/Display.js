@@ -4,7 +4,7 @@ function Display(props) {
   const {english, romaji, japanese, theme, showTransition } = props;
   const noSampleYet = (Boolean(english)).valueOf();
   const displayEnglish = noSampleYet ? english : 'Click an image below or press the corresponding key to hear the sample.';
-  const displayJapanese = noSampleYet ? japanese : '下の画像をクリックし（または画像に応じたキーを押して）、音が出ます。';
+  const displayJapanese = noSampleYet ? japanese : '各ボタン（またはボタンに応じたキー）を押し、音声が流れます。';
   const displayRomaji = noSampleYet ? romaji : 'Click an image below or press the corresponding key to hear the sample.';
 
   const displayText = (theme.language === 'english') ? displayEnglish
