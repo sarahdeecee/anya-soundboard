@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 function Display(props) {
   const {english, romaji, japanese, theme, showTransition } = props;
@@ -12,17 +12,18 @@ function Display(props) {
     : (theme.language === 'romaji') ? displayRomaji
     : '';
 
-  return (
-    <SwitchTransition>
-      <CSSTransition classNames="fade"
-        key={showTransition.display ? 'display-true' : 'display-false'}
-        addEndListener={(node, done) => {
-          node.addEventListener("transitionend", done, false);
-        }}
+  return (<Box id="display-box">
+      <SwitchTransition>
+        <CSSTransition classNames="fade"
+          key={showTransition.display ? 'display-true' : 'display-false'}
+          addEndListener={(node, done) => {
+            node.addEventListener("transitionend", done, false);
+          }}
         >
-        <Typography variant={noSampleYet ? 'h3' : 'h5'} component="h1" id="display" sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>{displayText}</Typography>
-      </CSSTransition>
-    </SwitchTransition>
+          <Typography variant={noSampleYet ? 'h3' : 'h5'} component="h1" id="display">{displayText}</Typography>
+        </CSSTransition>
+      </SwitchTransition>
+    </Box>
   );
 }
 

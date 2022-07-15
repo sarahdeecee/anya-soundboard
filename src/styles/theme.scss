@@ -52,3 +52,13 @@ img {
     color: var(--theme-border);
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .drum-machine {
+    margin-top: 3em;
+  }
+  #display-box {
+    background-color: var(--theme-page-background);
+    color: var(--theme-color);
+  }
+}

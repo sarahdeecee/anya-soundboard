@@ -20,8 +20,10 @@ img.select {
   opacity: 0.5;
 }
 
-#display {
+#display-box {
   min-height: 2rem;
+  height: auto;
+  min-width: 95%;
   margin-bottom: 1rem;
 }
 
@@ -58,10 +60,19 @@ span.MuiBadge-colorSecondary {
   #mobile-menu {
     display: flex;
   }
-  .MuiTypography-h3 {
+  #display-box {
+    position: fixed;
+    top: 0;
+    height: 2em;
+    padding: 1em 2em;
+    z-index: 1;
+    text-align: center;
+    overflow: auto;
+  }
+  h1.MuiTypography-h3 {
     font-size: x-large;
   }
-  #display.MuiTypography-h5 {
+  h1.MuiTypography-h5 {
     font-size: large;
   }
   .drum-machine {

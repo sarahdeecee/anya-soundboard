@@ -8,8 +8,8 @@ import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
-import { Button, Dialog } from "@mui/material";
-import { useReducer, useState } from "react";
+import { Button, Dialog, Popover, Popper } from "@mui/material";
+import { useEffect, useReducer, useState } from "react";
 import SampleSelector from './components/SampleSelector';
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
     12: true,
   });
   const [openEpisodePicker, setOpenEpisodePicker] = useState(false);
+  const [openSampleText, setOpenSampleText] = useState(true);
   const [mode, setMode] = useState('play');
 
   const samples = addKeypress(sampleData);
@@ -97,6 +98,10 @@ function App() {
     setOpenEpisodePicker(false);
   };
   
+  const handleSampleTextClose = () => {
+  //   setOpenSampleText(false);
+  }
+  
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
   return (
@@ -113,8 +118,8 @@ function App() {
       </>}
       <SampleSelector theme={theme} mode={mode} setMode={setMode} samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} />
       <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-      {(mode !== 'faves') && <SampleBoard sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
-      {(mode === 'faves') && <SampleBoard sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
+      {(mode !== 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
+      {(mode === 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
       {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
       <MobileMenu theme={theme} setTheme={setTheme} />
     </div>
