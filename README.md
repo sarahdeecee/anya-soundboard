@@ -35,8 +35,14 @@ This app also features light and dark modes and a responsive layout.
 - Samples from episode 3 to 6 added
 - Japanese text added
 - Adaptive keypress function to optimize which keys are assigned to samples
-- Add episode selector
+- Added episode selector
+
+**Version 1.2.0**
+- Samples from episode 7 added
+- Updated mobile view with new menu
+- Added "favourites" functionality
 
 ## Future Plans
+- [x] Choose samples for customized soundboard
 - More samples
-- Choose samples for customized soundboard
+- Add episode selector to mobile view
