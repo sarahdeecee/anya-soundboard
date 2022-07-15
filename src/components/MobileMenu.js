@@ -1,4 +1,4 @@
-import { Avatar, BottomNavigation, BottomNavigationAction, Divider, ListItemIcon, Menu, MenuItem, Paper, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Divider, List, ListItemIcon, ListItem, Menu, MenuItem,Paper, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { PlayArrow, Favorite, FilterAlt, Settings, PersonAdd, Logout } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -7,85 +7,45 @@ function MobileMenu(props) {
   const [navValue, setNavValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const handleClickListItem = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuItemClick = (event) => {
-  };
-  
-  const handleLanguage = e => {
-    console.log(e.target)
-    setAnchorEl(null);
-    setTheme({...theme, language: e.target.value});
-  }
-  const handleMode = e => {
-    setAnchorEl(null);
-    setTheme({...theme, mode: e.target.value});
-  }
-
   const handleClose = () => {
     setAnchorEl(null);
   };
   
-  const handleSettings = () => {
-    
+  const handleLanguage = language => {
+    setAnchorEl(null);
+    setTheme({...theme, language});
+  }
+  const handleMode = mode => {
+    setAnchorEl(null);
+    setTheme({...theme, mode});
   }
 
-  const themeOptions = {
-    
-  }
-
-  // const handleClick = (event) => {
-  //   setNavAnchor(event.currentTarget);
-  // };
-  // const handleClose = () => {
-  //   setNavAnchor(null);
-  // };
-
-  const options = [
-    'Light', 'Dark',
-    'English', 'Romaji', 'Japanese'
-  ];
+  const handleSettings = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
   const menu = <Menu
-    id="lock-menu"
+    id="popup-menu"
+    aria-label="Device settings"
     anchorEl={anchorEl}
     open={open}
     onClose={handleClose}
-    MenuListProps={{
-      'aria-labelledby': 'lock-button',
-      role: 'listbox',
-    }}
     anchorOrigin={{
-      vertical: 'bottom',
-      horizontal: 'left',
+      vertical: 'top',
+      horizontal: 'right',
     }}
     transformOrigin={{
       vertical: 'bottom',
-      horizontal: 'left',
+      horizontal: 'right',
     }}
+    sx={{marginLeft: '1em'}}
   >
-      <ToggleButtonGroup
-        value={theme.mode}
-        exclusive
-        onChange={handleMode}
-        className="menu-group"
-      >
-        <ToggleButton value="light" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ライト' : 'Light'}</ToggleButton>
-        <ToggleButton value="dark" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ダーク' : 'Dark'}</ToggleButton>
-      </ToggleButtonGroup>
-      <Divider id="menu-divider" flexItem orientation="vertical" sx={{ mx: 0.5, my: 1 }} />
-      <ToggleButtonGroup
-        value={theme.language}
-        exclusive
-        onChange={handleLanguage}
-        className="menu-group"
-      >
-        <ToggleButton value="english" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? '英語' : 'English'}</ToggleButton>
-        <ToggleButton value="romaji" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? 'ローマ字' : 'Romaji'}</ToggleButton>
-        <ToggleButton value="japanese" sx={{border: 0}} className={theme.mode}>{theme.language === 'japanese' ? '日本語' : 'Japanese'}</ToggleButton>
-      </ToggleButtonGroup>
+    <MenuItem value="light" className={theme.mode} onClick={() => handleMode('light')}>{theme.language === 'japanese' ? 'ライト' : 'Light'}</MenuItem>
+    <MenuItem value="dark" className={theme.mode} onClick={() => handleMode('dark')}>{theme.language === 'japanese' ? 'ダーク' : 'Dark'}</MenuItem>
+    <Divider flexItem sx={{ mx: 0.5, my: 1 }} />
+    <MenuItem value="english" className={theme.mode} onClick={() => handleLanguage('english')}>{theme.language === 'japanese' ? '英語' : 'English'}</MenuItem>
+    <MenuItem value="romaji" className={theme.mode} onClick={() => handleLanguage('romaji')}>{theme.language === 'japanese' ? 'ローマ字' : 'Romaji'}</MenuItem>
+    <MenuItem value="japanese" className={theme.mode} onClick={() => handleLanguage('japanese')}>{theme.language === 'japanese' ? '日本語' : 'Japanese'}</MenuItem>
   </Menu>
 
   return (<>
@@ -99,10 +59,10 @@ function MobileMenu(props) {
       }}
       sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
     >
-      <BottomNavigationAction label="Play" icon={<PlayArrow />} onClick={() => setMode('play')} />
-      <BottomNavigationAction label="Select" icon={<FilterAlt />} onClick={() => setMode('select')} />
-      <BottomNavigationAction label="Favorites" icon={<Favorite />} onClick={() => setMode('faves')} />
-      <BottomNavigationAction label="Settings" icon={<Settings />} onClick={handleClickListItem} />
+      <BottomNavigationAction label={(theme.language === 'japanese') ? 'ポン出し' : 'Play'} icon={<PlayArrow />} onClick={() => setMode('play')} />
+      <BottomNavigationAction label={(theme.language === 'japanese') ? 'セレクト' : 'Select'} icon={<FilterAlt />} onClick={() => setMode('select')} />
+      <BottomNavigationAction label={(theme.language === 'japanese') ? 'カスタム' : 'Favorites'} icon={<Favorite />} onClick={() => setMode('faves')} />
+      <BottomNavigationAction label={(theme.language === 'japanese') ? '設定' : 'Settings'} icon={<Settings />} onClick={handleSettings} />
     </BottomNavigation>
     {menu}
     </>
