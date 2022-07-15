@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import SampleButton from "./SampleButton";
-import Display from "./Display";
 
 function SampleBoard(props) {
   const {sample, setSample, playAudio, samples, theme, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode, openSampleText, setOpenSampleText} = props;

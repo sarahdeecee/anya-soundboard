@@ -1,5 +1,5 @@
-import { BottomNavigation, BottomNavigationAction, Divider, List, ListItemIcon, ListItem, Menu, MenuItem,Paper, ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { PlayArrow, Favorite, FilterAlt, Settings, PersonAdd, Logout } from "@mui/icons-material";
+import { BottomNavigation, BottomNavigationAction, Divider, Menu, MenuItem } from "@mui/material";
+import { PlayArrow, Favorite, FilterAlt, Settings } from "@mui/icons-material";
 import { useState } from "react";
 
 function MobileMenu(props) {

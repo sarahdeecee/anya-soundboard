@@ -8,8 +8,8 @@ import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
-import { Button, Dialog, Popover, Popper } from "@mui/material";
-import { useEffect, useReducer, useState } from "react";
+import { Button, Dialog } from "@mui/material";
+import { useReducer, useState } from "react";
 import SampleSelector from './components/SampleSelector';
 
 function App() {
