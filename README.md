@@ -42,6 +42,10 @@ This app also features light and dark modes and a responsive layout.
 - Updated mobile view with new menu
 - Added "favourites" functionality
 
+**Version 1.3.0**
+- Updated desktop view
+- Fixed theme colours
+
 ## Future Plans
 - [x] Choose samples for customized soundboard
 - More samples
