@@ -9,9 +9,8 @@ import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import ScrollTop from './components/ScrollTop';
 import useEventListener from './hooks/useKeyPress';
-import { Box, Button, createTheme, CssBaseline, Dialog, Fab, TabPanel, ThemeProvider } from "@mui/material";
+import { Box, createTheme, CssBaseline, Dialog, Fab, ThemeProvider } from "@mui/material";
 import { useMemo, useReducer, useState } from "react";
-import SampleSelector from './components/SampleSelector';
 import { darkTheme, lightTheme } from './styles/Theme';
 import { ColorContext } from './ColorContext';
 import { KeyboardArrowUp } from '@mui/icons-material';
@@ -53,7 +52,7 @@ function App() {
         );
       },
     }),
-    []
+    [theme.mode]
   );
   
   const themeMode = useMemo(
@@ -118,10 +117,6 @@ function App() {
   const handleCloseEpisodes = () => {
     setOpenEpisodePicker(false);
   };
-  
-  const handleSampleTextClose = () => {
-  //   setOpenSampleText(false);
-  }
   
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
