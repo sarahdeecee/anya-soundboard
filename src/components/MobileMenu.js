@@ -46,6 +46,8 @@ function MobileMenu(props) {
     <MenuItem value="english" className={theme.mode} onClick={() => handleLanguage('english')}>{theme.language === 'japanese' ? '英語' : 'English'}</MenuItem>
     <MenuItem value="romaji" className={theme.mode} onClick={() => handleLanguage('romaji')}>{theme.language === 'japanese' ? 'ローマ字' : 'Romaji'}</MenuItem>
     <MenuItem value="japanese" className={theme.mode} onClick={() => handleLanguage('japanese')}>{theme.language === 'japanese' ? '日本語' : 'Japanese'}</MenuItem>
+    <Divider flexItem sx={{ mx: 0.5, my: 1 }} />
+    <MenuItem value="Episode" className={theme.mode} onClick={handleOpenEpisodes}>{theme.language === 'japanese' ? 'エピソード' : "Episodes"}</MenuItem>
   </Menu>
 
   return (<>
