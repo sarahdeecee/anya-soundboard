@@ -9,7 +9,7 @@ export const lightTheme = {
       contrastText: '#182c5b',
     },
     text: {
-      secondary: '#000000',
+      secondary: '#463C3B',
       primary: '#000',
     },
     background: {
@@ -51,6 +51,27 @@ export const lightTheme = {
           color: "#000"
         }
       }
+    },
+    MuiBottomNavigation: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#ffb3af',
+        }
+      }
+    },
+    MuiBottomNavigationAction: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            color: '#FFFFFF',
+          },
+        },
+        label: {
+          "&.Mui-selected": {
+            color: '#FFFFFF',
+          }
+        }
+      }
     }
   },
 };
@@ -66,7 +87,7 @@ export const darkTheme = {
       contrastText: '#182c5b',
     },
     text: {
-      secondary: '#000000',
+      secondary: '#1d2720',
       primary: '#d3ede1',
     },
     background: {
@@ -100,6 +121,27 @@ export const darkTheme = {
           fontSize: 'large',
           color: '#d3ede1'
         },
+      }
+    },
+    MuiBottomNavigation: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#487962',
+        }
+      }
+    },
+    MuiBottomNavigationAction: {
+      styleOverrides: {
+        root: {
+          "&.Mui-selected": {
+            color: '#d3ede1',
+          },
+        },
+        label: {
+          "&.Mui-selected": {
+            color: '#d3ede1',
+          }
+        }
       }
     }
   },

@@ -61,7 +61,7 @@ function MobileMenu(props) {
     >
       <BottomNavigationAction label={(theme.language === 'japanese') ? 'ポン出し' : 'Play'} icon={<PlayArrow />} onClick={() => setMode('play')} />
       <BottomNavigationAction label={(theme.language === 'japanese') ? '選択' : 'Select'} icon={<FilterAlt />} onClick={() => setMode('select')} />
-      <BottomNavigationAction label={(theme.language === 'japanese') ? 'お気に入り' : 'Favorites'} icon={<Favorite />} onClick={() => setMode('faves')} />
+      <BottomNavigationAction label={(theme.language === 'japanese') ? '気に入り' : 'Favorites'} icon={<Favorite />} onClick={() => setMode('faves')} />
       <BottomNavigationAction label={(theme.language === 'japanese') ? '設定' : 'Settings'} icon={<Settings />} onClick={handleSettings} />
     </BottomNavigation>
     {menu}

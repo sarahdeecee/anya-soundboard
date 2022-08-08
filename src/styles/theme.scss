@@ -3,7 +3,7 @@
   --theme-page-background: #ffd8d6;
   --theme-border: #fff;
   --theme-accent-light: #FFB3AF;
-  --theme-accent-dark: #A76562;
+  --theme-accent-dark: #C87170;
   --theme-button-hover: #EBA5A1;
 }
 
@@ -27,11 +27,5 @@ img.sample {
   #display-box {
     background-color: var(--theme-page-background);
     color: var(--theme-color);
-  }
-  button.MuiBottomNavigationAction-root {
-    color: var(--theme-color);
-    .Mui-selected {
-      color: var(--theme-accent-dark);
-    }
   }
 }
