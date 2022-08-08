@@ -16,38 +16,8 @@
   --theme-button-hover: #41705B;
 }
 
-.App {
-  background-color: var(--theme-page-background);
-  color: var(--theme-color);
-}
-
-span.MuiBadge-colorSecondary {
-  background-color: var(--theme-accent-dark);
-}
-.MuiButtonBase-root.MuiToggleButton-root.Mui-selected {
-  color: var(--theme-color);
-}
-.MuiButtonBase-root.MuiToggleButton-root {
-  color: var(--theme-accent-dark);
-}
-
-button.MuiButton-root {
-  color: var(--theme-color);
-  background-color: var(--theme-accent-light);
-  border-color: var(--theme-accent-dark);
-}
-button.MuiButton-root:hover {
-  background-color: var(--theme-button-hover);
-  border-color: var(--theme-accent-dark);
-}
-
-img {
+img.sample {
   border: 2px solid var(--theme-border);
-}
-
-#menu, button.MuiBottomNavigationAction-root {
-  background-color: var(--theme-accent-light);
-  border-color: var(--theme-accent-dark);
 }
 
 @media only screen and (max-width: 400px) {

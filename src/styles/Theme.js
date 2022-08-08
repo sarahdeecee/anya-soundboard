@@ -5,7 +5,7 @@ export const lightTheme = {
       main: '#ffb3af',
     },
     secondary: {
-      main: '#ffffff',
+      main: '#A76562',
       contrastText: '#182c5b',
     },
     text: {
@@ -18,10 +18,8 @@ export const lightTheme = {
     },
   },
   components: {
-    // Name of the component
     MuiTab: {
       styleOverrides: {
-        // Name of the slot
         fontSize: '1.25em',
         root:{
           "&.Mui-selected": {
@@ -38,6 +36,14 @@ export const lightTheme = {
           color: 'white',
         },
       }
+    },
+    MuiBadge: {
+      styleOverrides: {
+        badge: {
+          fontSize: 'large',
+          color: '#FFF'
+        },
+      }
     }
   },
 };
@@ -49,7 +55,7 @@ export const darkTheme = {
       main: '#487962',
     },
     secondary: {
-      main: '#ffffff',
+      main: '#487962',
       contrastText: '#182c5b',
     },
     text: {
@@ -61,12 +67,33 @@ export const darkTheme = {
       paper: '#487962',
     },
   },
-  //   components: {
-  //     MuiToolbar: {
-  //       styleOverrides: {
-
-  //       }
-  //     },
-  //   }
-  // },
+  components: {
+    MuiTab: {
+      styleOverrides: {
+        fontSize: '1.25em',
+        root:{
+          "&.Mui-selected": {
+            color: '#FFFFFF',
+            fontSize: '2em',
+          },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: 'white',
+          color: 'white',
+        },
+      }
+    },
+    MuiBadge: {
+      styleOverrides: {
+        badge: {
+          fontSize: 'large',
+          color: '#d3ede1'
+        },
+      }
+    }
+  },
 };

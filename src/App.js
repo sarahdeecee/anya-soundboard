@@ -1,5 +1,5 @@
 import './App.css';
-// import './styles/theme.scss';
+import './styles/theme.scss';
 import addKeypress from './data/helpers/AddKeypress';
 import sampleData from './data/Samples.js';
 import Display from './components/Display';
