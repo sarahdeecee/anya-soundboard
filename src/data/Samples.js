@@ -338,6 +338,85 @@ const sampleData = [
     file: '../../07-koroshitewadame.mp3',
     picture: '../../07-koroshitewadame.jpg'
   },
+  // 9:02
+  { english: 'He has 2/8 of his bullets left!',
+    romaji: 'zandansuu... hachibun no ni!',
+    japanese: '残弾数…８分の２！',
+    episode: '8',
+    file: '../../08-zandansuu.mp3',
+    picture: '../../08-zandansuu2.jpg'
+  },
+  // 9:32
+  { english: 'Papa and mama are flirting',
+    romaji: 'chichi to haha ichaicha',
+    japanese: '父と母イチャイチャ',
+    episode: '8',
+    file: '../../08-ichaicha.mp3',
+    picture: '../../08-ichaicha.jpg'
+  },
+  // 4:05
+  { english: 'Is the world ending...?!',
+    romaji: 'chikyuu no owari...?!',
+    japanese: '地球の終わり…？！',
+    episode: '9',
+    file: '../../09-chikyuunoowari.mp3',
+    picture: '../../09-chikyuunoowari.jpg'
+  },
+  // 8:33
+  { english: 'Good mowning',
+    romaji: 'ohaimasu',
+    japanese: '',
+    episode: '9',
+    file: '../../09-ohaimasu.mp3',
+    picture: '../../09-ohaimasu.jpg'
+  },
+  //8:36
+  { english: 'Papa, you\'re looking green today',
+    romaji: 'chichi kyou wa nandaka midoriiro',
+    japanese: '',
+    episode: '9',
+    file: '../../09-midoriiro.mp3',
+    picture: '../../09-midoriiro.jpg'
+  },
+  // 9:26
+  { english: 'It\'s kinda exciting!',
+    romaji: 'nanka wakuwaku',
+    japanese: '',
+    episode: '9',
+    file: '../../09-nankawakuwaku.mp3',
+    picture: '../../09-nankawakuwaku.jpg'
+  },
+  // { english: 'Return my excitement!',
+  //   romaji: 'wakuwaku kaese!',
+  //   japanese: 'ワクワク返せ！',
+  //   episode: '9',
+  //   file: '../../09-wakuwakukaese.mp3',
+  //   picture: '../../09-wakuwakukaese.jpg'
+  // },
+  // 11:54
+  { english: 'Papa and mama have to get along',
+    romaji: 'chichi to haha, nakayokushinaito dame',
+    japanese: '父と母、仲良くしないとダメ',
+    episode: '9',
+    file: '../../09-nakayokushinaito.mp3',
+    picture: '../../09-nakayokushinaito.jpg'
+  },
+  // 22:14
+  { english: 'Papa and mama are getting along!',
+    romaji: 'chichi to haha, nakayoshi!',
+    japanese: '父と母、仲良し！',
+    episode: '9',
+    file: '../../09-nakayoshi.mp3',
+    picture: '../../09-nakayoshi.jpg'
+  },
+  // 22:04
+  { english: 'Anya has arrived!',
+    romaji: 'anya kikan shita!',
+    japanese: 'アーニャ帰還した！',
+    episode: '9',
+    file: '../../09-kikan.mp3',
+    picture: '../../09-kikan.jpg'
+  },
 ];
 
 export default sampleData;
