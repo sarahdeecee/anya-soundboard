@@ -1,5 +1,5 @@
 import './App.css';
-import './styles/theme.scss';
+// import './styles/theme.scss';
 import addKeypress from './data/helpers/AddKeypress';
 import sampleData from './data/Samples.js';
 import Display from './components/Display';
@@ -8,9 +8,11 @@ import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
-import { Box, Button, Dialog, TabPanel } from "@mui/material";
-import { useReducer, useState } from "react";
+import { Box, Button, createTheme, CssBaseline, Dialog, TabPanel, ThemeProvider } from "@mui/material";
+import { useMemo, useReducer, useState } from "react";
 import SampleSelector from './components/SampleSelector';
+import { darkTheme, lightTheme } from './styles/Theme';
+import { ColorContext } from './ColorContext';
 
 function App() {
   const [sample, setSample] = useState({});
@@ -39,6 +41,23 @@ function App() {
   const [openEpisodePicker, setOpenEpisodePicker] = useState(false);
   const [openSampleText, setOpenSampleText] = useState(true);
   const [mode, setMode] = useState('play');
+
+  // theme colours
+  const colorMode = useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setTheme(prevTheme =>
+          prevTheme, theme.mode === "light" ? "dark" : "light"
+        );
+      },
+    }),
+    []
+  );
+  
+  const themeMode = useMemo(
+    () => createTheme(theme.mode === "light" ? lightTheme : darkTheme),
+    [theme.mode]
+  );
 
   const samples = addKeypress(sampleData);
   
@@ -105,6 +124,9 @@ function App() {
   const isSamplesEmpty = !Object.values(checked).includes(true);
 
   return (
+    <ColorContext.Provider value={colorMode}>
+    <ThemeProvider theme={themeMode}>
+      <CssBaseline enableColorScheme />
     <div className={`App ${theme.mode}`}>
       <Box sx={{minHeight: '100vh'}}>
         <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
@@ -124,6 +146,8 @@ function App() {
         <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
       </Box>
     </div>
+    </ThemeProvider>
+    </ColorContext.Provider>
   );
 }
 
