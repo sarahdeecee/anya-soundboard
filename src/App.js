@@ -8,7 +8,7 @@ import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import useEventListener from './hooks/useKeyPress';
-import { Button, Dialog } from "@mui/material";
+import { Box, Button, Dialog, TabPanel } from "@mui/material";
 import { useReducer, useState } from "react";
 import SampleSelector from './components/SampleSelector';
 
@@ -106,22 +106,23 @@ function App() {
 
   return (
     <div className={`App ${theme.mode}`}>
-      <Menu theme={theme} setTheme={setTheme} />
-      {(mode !== 'faves') && <>
-        <Button id="episode-picker-btn" variant="outlined" className={theme.mode} onClick={handleOpenEpisodes}
-        sx={{mt: 2}}>
-          {(theme.language === 'japanese') ? 'エピソード選択' : 'Choose Episodes' }
-        </Button>
+      <Box sx={{minHeight: '100vh'}}>
+        <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
         <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
           <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
         </Dialog>
-      </>}
-      <SampleSelector theme={theme} mode={mode} setMode={setMode} samples={samples} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} />
-      <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-      {(mode !== 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
-      {(mode === 'faves') && <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />}
-      {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
-      <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
+        <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
+        <Box sx={{p: 2, display: 'flex', justifyContent: 'center'}}>
+          {(mode !== 'faves') && 
+            <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
+          }
+          {(mode === 'faves') && 
+            <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
+          }
+          {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
+        </Box>
+        <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
+      </Box>
     </div>
   );
 }

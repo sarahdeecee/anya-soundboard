@@ -1,15 +1,13 @@
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   height: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   text-align: center;
-  padding: 1em;
 }
 
-img {
+img.sample {
   height: auto;
   max-width: 200px;
   width: 100%;
@@ -24,7 +22,6 @@ img.select {
   min-height: 2rem;
   height: auto;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 #menu {

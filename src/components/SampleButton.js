@@ -29,7 +29,7 @@ function SampleButton(props) {
     src={picture}
     srcSet={picture}
     alt={english}
-    className={(mode === 'select' && !selectedSamples.includes(english)) ? mode : ''}
+    className={(mode === 'select' && !selectedSamples.includes(english)) ? `${mode} sample` : 'sample'}
     onClick={(mode === 'select') ? handleSampleSelection : clickPicture}
   />
   
