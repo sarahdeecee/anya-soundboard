@@ -125,6 +125,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <CssBaseline enableColorScheme />
       <div className={`App ${theme.mode}`}>
+        <span id="top"></span>
         <Box sx={{minHeight: '100vh'}}>
           <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} sample={sample} showTransition={showTransition} setShowTransition={setShowTransition} />
           <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>

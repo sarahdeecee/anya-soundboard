@@ -13,12 +13,13 @@ export default function ScrollTop(props) {
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
-      '#display',
+      '#top',
     );
 
     if (anchor) {
       anchor.scrollIntoView({
         block: 'center',
+        behavior: 'smooth'
       });
     }
   };
