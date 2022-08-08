@@ -29,6 +29,7 @@ export default function ScrollTop(props) {
         onClick={handleClick}
         role="presentation"
         sx={{ position: 'fixed', bottom: 16, right: 16 }}
+        id="back-to-top-arrow-box"
       >
         {children}
       </Box>

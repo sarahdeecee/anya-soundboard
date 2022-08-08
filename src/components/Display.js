@@ -12,7 +12,7 @@ function Display(props) {
     : (theme.language === 'romaji') ? displayRomaji
     : '';
 
-  return (<Box id="display-box">
+  return (<Box id="display-box" sx={{minHeight: '2em'}}>
       <SwitchTransition>
         <CSSTransition classNames="fade"
           key={showTransition.display ? 'display-true' : 'display-false'}

@@ -20,7 +20,6 @@ img.select {
 }
 
 #display-box {
-  min-height: 2rem;
   height: auto;
   width: 100%;
 }
@@ -62,7 +61,6 @@ svg {
     display: flex;
     position: fixed;
     top: 0;
-    height: 2em;
     padding: 1em 0;
     z-index: 1;
     text-align: center;
@@ -79,6 +77,9 @@ svg {
     margin-bottom: 3rem;
   }
   span.MuiBadge-colorSecondary {
+    display: none;
+  }
+  #back-to-top-arrow-box {
     display: none;
   }
 }

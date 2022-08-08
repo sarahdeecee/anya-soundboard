@@ -6,7 +6,7 @@ function SampleBoard(props) {
   
   const sampleButtons = samples.map(sample => 
       <Grid container item
-        xs={4} sm={3} md={2}
+        xs={4} sm={3} md={2} lg={1.50}
         wrap="nowrap"
         direction="column"
         key={sample.english}

@@ -129,30 +129,30 @@ function App() {
     <ColorContext.Provider value={colorMode}>
     <ThemeProvider theme={themeMode}>
       <CssBaseline enableColorScheme />
-    <div className={`App ${theme.mode}`}>
-      <Box sx={{minHeight: '100vh'}}>
-        <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
-        <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
-          <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
-        </Dialog>
-        <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-        <Box sx={{p: 2, display: 'flex', justifyContent: 'center'}}>
-          {(mode !== 'faves') && 
-            <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
-          }
-          {(mode === 'faves') && 
-            <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
-          }
-          {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
+      <div className={`App ${theme.mode}`}>
+        <Box sx={{minHeight: '100vh'}}>
+          <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
+          <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
+            <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
+          </Dialog>
+          <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
+          <Box sx={{p: 2, display: 'flex', justifyContent: 'center'}}>
+            {(mode !== 'faves') && 
+              <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
+            }
+            {(mode === 'faves') && 
+              <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
+            }
+            {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
+          </Box>
+          <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
         </Box>
-        <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
-      </Box>
-      <ScrollTop>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUp />
-        </Fab>
-      </ScrollTop>
-    </div>
+        <ScrollTop id="back-to-top-arrow">
+          <Fab size="small" aria-label="scroll back to top">
+            <KeyboardArrowUp />
+          </Fab>
+        </ScrollTop>
+      </div>
     </ThemeProvider>
     </ColorContext.Provider>
   );
