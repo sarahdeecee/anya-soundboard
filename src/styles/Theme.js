@@ -2,7 +2,7 @@ export const lightTheme = {
   palette: {
     type: 'light',
     primary: {
-      main: '#eba5a1',
+      main: '#ffb3af',
     },
     secondary: {
       main: '#ffffff',
@@ -16,6 +16,29 @@ export const lightTheme = {
       default: '#ffd8d6',
       paper: '#FFB3AF',
     },
+  },
+  components: {
+    // Name of the component
+    MuiTab: {
+      styleOverrides: {
+        // Name of the slot
+        fontSize: '1.25em',
+        root:{
+          "&.Mui-selected": {
+            color: '#FFFFFF',
+            fontSize: '2em',
+          },
+        },
+      },
+    },
+    MuiTabs: {
+      styleOverrides: {
+        indicator: {
+          backgroundColor: 'white',
+          color: 'white',
+        },
+      }
+    }
   },
 };
 

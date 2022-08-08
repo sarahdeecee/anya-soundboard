@@ -16,9 +16,9 @@ function Menu(props) {
   }
   return (
     <AppBar position="static" id="menu" sx={{mb: 2, top: 0}}>
-      <Toolbar  sx={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+      <Toolbar disableGutters sx={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
         <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-          <Avatar variant="square" src="anyaicon.png" sx={{borderRadius: 0, border: 0, mr: 2}}></Avatar>
+          <Avatar variant="square" src="anyaicon.png" sx={{height: '64px', width: '64px', borderRadius: 0, border: 0, mr: 2}}></Avatar>
           <Typography variant="h5" component="h1">
             Anya Soundboard
           </Typography>
@@ -45,6 +45,7 @@ function Menu(props) {
             exclusive
             onChange={handleThemeLanguage}
             className="menu-group"
+            sx={{mr: 1}}
           >
             <ToggleButton value="english" className={theme.mode}>{theme.language === 'japanese' ? '英' : 'EN'}</ToggleButton>
             <ToggleButton value="romaji" className={theme.mode}>{theme.language === 'japanese' ? 'A' : 'RO'}</ToggleButton>
