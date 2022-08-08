@@ -12,7 +12,9 @@ function Menu(props) {
   const handleMode = (e, value) => {
     console.log('event ', e);
     console.log('value ',value);
-    setMode(value);
+    if (value !== 3) {
+      setMode(value);
+    }
   }
   return (
     <AppBar position="static" id="menu" sx={{mb: 2, top: 0}}>

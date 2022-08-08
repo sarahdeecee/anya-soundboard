@@ -9,7 +9,7 @@ import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
 import ScrollTop from './components/ScrollTop';
 import useEventListener from './hooks/useKeyPress';
-import { Box, createTheme, CssBaseline, Dialog, Fab, ThemeProvider } from "@mui/material";
+import { Box, createTheme, CssBaseline, Dialog, Fab, ThemeProvider, Typography } from "@mui/material";
 import { useMemo, useReducer, useState } from "react";
 import { darkTheme, lightTheme } from './styles/Theme';
 import { ColorContext } from './ColorContext';
@@ -131,12 +131,12 @@ function App() {
             <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
           </Dialog>
           <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-          <Box sx={{p: 2, display: 'flex', justifyContent: 'center'}}>
-            {(mode !== 'faves') && 
+          <Box id="sample-box" sx={{minHeight: '80vh', height: '100%', p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
+            {(mode === 'faves') ? 
+              (selectedSamples.length !== 0) ? <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
+              : <Typography variant="h5" component="p">No favourites selected.</Typography>
+             : (mode !== 'faves') && 
               <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
-            }
-            {(mode === 'faves') && 
-              <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
             }
             {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
           </Box>
