@@ -20,12 +20,13 @@ img.sample {
   border: 2px solid var(--theme-border);
 }
 
+#display-box {
+  background-color: var(--theme-page-background);
+  color: var(--theme-color);
+}
+
 @media only screen and (max-width: 400px) {
   .drum-machine {
     margin-top: 3em;
-  }
-  #display-box {
-    background-color: var(--theme-page-background);
-    color: var(--theme-color);
   }
 }

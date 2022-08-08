@@ -13,7 +13,7 @@ export default function ScrollTop(props) {
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
-      '#menu',
+      '#display',
     );
 
     if (anchor) {

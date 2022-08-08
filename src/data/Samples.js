@@ -363,9 +363,9 @@ const sampleData = [
     picture: '../../09-chikyuunoowari.jpg'
   },
   // 8:33
-  { english: 'Good mowning',
-    romaji: 'ohaimasu',
-    japanese: '',
+  { english: 'Good mowning...',
+    romaji: 'ohaemasu...',
+    japanese: 'おはえます…',
     episode: '9',
     file: '../../09-ohaimasu.mp3',
     picture: '../../09-ohaimasu.jpg'
@@ -373,7 +373,7 @@ const sampleData = [
   //8:36
   { english: 'Papa, you\'re looking green today',
     romaji: 'chichi kyou wa nandaka midoriiro',
-    japanese: '',
+    japanese: '父今日はなんだか緑色',
     episode: '9',
     file: '../../09-midoriiro.mp3',
     picture: '../../09-midoriiro.jpg'
@@ -381,7 +381,7 @@ const sampleData = [
   // 9:26
   { english: 'It\'s kinda exciting!',
     romaji: 'nanka wakuwaku',
-    japanese: '',
+    japanese: 'なんかワクワク！',
     episode: '9',
     file: '../../09-nankawakuwaku.mp3',
     picture: '../../09-nankawakuwaku.jpg'

@@ -126,12 +126,12 @@ function App() {
       <CssBaseline enableColorScheme />
       <div className={`App ${theme.mode}`}>
         <Box sx={{minHeight: '100vh'}}>
-          <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
+          <Menu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} sample={sample} showTransition={showTransition} setShowTransition={setShowTransition} />
           <Dialog open={openEpisodePicker} onClose={handleCloseEpisodes}>
             <EpisodePicker checked={checked} setChecked={setChecked} onClose={handleCloseEpisodes} theme={theme} sample={sample} setSample={setSample} />
           </Dialog>
           <Display {...sample} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} />
-          <Box id="sample-box" sx={{minHeight: '80vh', height: '100%', p: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
+          <Box id="sample-box" sx={{minHeight: '85vh', mt: '8em', height: '100%', p: 2, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', alignContent: 'center'}}>
             {(mode === 'faves') ? 
               (selectedSamples.length !== 0) ? <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={selectedSamplesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
               : <Typography variant="h5" component="p">No favourites selected.</Typography>
