@@ -14,7 +14,7 @@ export const lightTheme = {
     },
     background: {
       default: '#ffd8d6',
-      paper: '#FFB3AF',
+      paper: '#FFF',
     },
   },
   components: {
@@ -44,6 +44,13 @@ export const lightTheme = {
           color: '#FFF'
         },
       }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#000"
+        }
+      }
     }
   },
 };
@@ -64,7 +71,7 @@ export const darkTheme = {
     },
     background: {
       default: '#1d2720',
-      paper: '#487962',
+      paper: '#1d2720',
     },
   },
   components: {
