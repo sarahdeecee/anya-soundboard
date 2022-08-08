@@ -7,12 +7,14 @@ import SampleBoard from './components/SampleBoard';
 import Menu from './components/Menu';
 import MobileMenu from './components/MobileMenu';
 import EpisodePicker from './components/EpisodePicker';
+import ScrollTop from './components/ScrollTop';
 import useEventListener from './hooks/useKeyPress';
-import { Box, Button, createTheme, CssBaseline, Dialog, TabPanel, ThemeProvider } from "@mui/material";
+import { Box, Button, createTheme, CssBaseline, Dialog, Fab, TabPanel, ThemeProvider } from "@mui/material";
 import { useMemo, useReducer, useState } from "react";
 import SampleSelector from './components/SampleSelector';
 import { darkTheme, lightTheme } from './styles/Theme';
 import { ColorContext } from './ColorContext';
+import { KeyboardArrowUp } from '@mui/icons-material';
 
 function App() {
   const [sample, setSample] = useState({});
@@ -145,6 +147,11 @@ function App() {
         </Box>
         <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
       </Box>
+      <ScrollTop>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUp />
+        </Fab>
+      </ScrollTop>
     </div>
     </ThemeProvider>
     </ColorContext.Provider>
