@@ -1,10 +1,17 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Skeleton, Typography } from "@mui/material";
 import SampleButton from "./SampleButton";
 
 function SampleBoard(props) {
   const {sample, setSample, playAudio, samples, theme, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode, openSampleText, setOpenSampleText} = props;
   
-  const sampleButtons = samples.map(sample => 
+  const loadingSamplesNumber = 12;
+  const loadingSamples = [...Array(loadingSamplesNumber)].map((e, i) => <Grid key={i} container item xs={4} sm={3} md={2} lg={1.50}>
+    <Grid item xs={12}>
+      <Skeleton variant="rectangular" />
+    </Grid>
+  </Grid>);
+
+  const sampleButtons = samples ? samples.map(sample => 
       <Grid container item
         xs={4} sm={3} md={2} lg={1.50}
         wrap="nowrap"
@@ -36,7 +43,7 @@ function SampleBoard(props) {
           </Typography>
         </Grid>
       </Grid>
-  );
+  ) : {loadingSamples};
   return (
     <div className="drum-machine" tabIndex={0}>
       <Grid container spacing={{xs: 1, sm: 2}} xs={12}>

@@ -21,7 +21,7 @@ img.select {
 
 #display-box {
   height: auto;
-  width: 100%;
+  min-width: 100%;
 }
 
 #menu {
@@ -61,10 +61,11 @@ svg {
     display: flex;
     position: fixed;
     top: 0;
-    padding: 1em 0;
+    max-height: 4em;
+    padding: 1em;
     z-index: 1;
     text-align: center;
-    overflow: auto;
+    overflow: scroll;
     justify-content: center;
   }
   h1.MuiTypography-h3 {
