@@ -14,6 +14,10 @@ img.sample {
   border-radius: 10px;
   border: 2px solid white;
 }
+img.dark {
+  object-fit: cover;
+  opacity: 0.8;
+}
 
 img.select {
   opacity: 0.5;

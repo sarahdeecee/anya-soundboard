@@ -35,6 +35,7 @@ function SampleBoard(props) {
             mode={mode}
             openSampleText={openSampleText}
             setOpenSampleText={setOpenSampleText}
+            theme={theme}
           />
         </Grid>
         <Grid item xs={12} sx={{maxWidth: '200px', overflow: "hidden", textOverflow: "ellipsis"}}>
