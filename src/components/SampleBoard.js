@@ -4,6 +4,7 @@ import SampleButton from "./SampleButton";
 function SampleBoard(props) {
   const {setSample, playAudio, samples, theme, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode, openSampleText, setOpenSampleText} = props;
   
+  // Show skeleton while loading
   const loadingSamplesNumber = 12;
   const loadingSamples = [...Array(loadingSamplesNumber)].map((e, i) => <Grid key={i} container item xs={4} sm={3} md={2} lg={1.50}>
     <Grid item xs={12}>
@@ -49,6 +50,7 @@ function SampleBoard(props) {
         </Grid>
       </Grid>
   ) : {loadingSamples};
+  
   return (
     <Box className="drum-machine" tabIndex={0}>
       <Grid container spacing={{xs: 1, sm: 2}} sx={{display: 'flex', justifyContent: 'center'}}>
