@@ -31,7 +31,7 @@ Click an image or press the corresponding key to hear the voice sample.
 ### Episode selection
 ![Screenshot of episode selection](./public/screenshots/screenshot-episodeselect.png)
 ### Favourites
-![GIF of favourites being selected and played](./public/screenshots/screenshot-favourites2.gif)
+![GIF of favourites being selected and played](./public/screenshots/screenshot-favourites.gif)
 
 ## Stack
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
