@@ -75,6 +75,9 @@ svg {
     padding: 1em;
     overflow: scroll;
   }
+  .drum-machine {
+    margin-top: 3em;
+  }
   #sample-box {
     margin-top: 0;
     margin-bottom: 3em;
