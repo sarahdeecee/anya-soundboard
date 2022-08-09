@@ -339,7 +339,7 @@ const sampleData = [
     picture: '../../07-koroshitewadame.jpg'
   },
   // 9:02
-  { english: 'He has 2/8 of his bullets left!',
+  { english: 'He has 2/8 bullets remaining!',
     romaji: 'zandansuu... hachibun no ni!',
     japanese: '残弾数…８分の２！',
     episode: '8',
@@ -371,7 +371,7 @@ const sampleData = [
     picture: '../../09-ohaimasu.jpg'
   },
   //8:36
-  { english: 'Papa, you\'re looking green today',
+  { english: 'Papa, you\'re looking kinda green today',
     romaji: 'chichi kyou wa nandaka midoriiro',
     japanese: '父今日はなんだか緑色',
     episode: '9',
@@ -426,7 +426,7 @@ const sampleData = [
     picture: '../../10-kusoyarou.jpg'
   },
   // 5:49
-  { english: 'Anya has retu~rned!',
+  { english: 'Anya arri~ved!',
     romaji: 'anya kika~n',
     japanese: 'アーニャきか〜ん',
     episode: '10',
@@ -452,7 +452,7 @@ const sampleData = [
   // 21:06
   { english: 'Finisher! Star Catch Arrow!',
     romaji: 'hissatsu! star catch arrow!',
-    japanese: '必殺！スターキャッチアロー',
+    japanese: '必殺！スターキャッチアロー！',
     episode: '10',
     file: '../../10-starcatcharrow.mp3',
     picture: '../../10-starcatcharrow.jpg'
@@ -465,182 +465,187 @@ const sampleData = [
     file: '../../10-gyahi.mp3',
     picture: '../../10-gyahi.jpg'
   },
-  // // 1:59
-  // { english: '',
-  //   romaji: 'anya ima isogashii',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 5:12
-  // { english: '',
-  //   romaji: 'BWUAAAAAAAaaAuuu',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 6:02
-  // { english: '',
-  //   romaji: 'toriaezu kono na wa hodoke',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 
-  // { english: '',
-  //   romaji: 'odekeke?',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 8:18
-  // { english: '',
-  //   romaji: 'chichi... gomennasai',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 13:37
-  // { english: '',
-  //   romaji: 'ehe!',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 15:37
-  // { english: '',
-  //   romaji: 'starlight anya to yobe',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 18:59
-  // { english: '',
-  //   romaji: 'peanuts ichinenbun?',
-  //   japanese: '',
-  //   episode: '11',
-  //   file: '../../11-.mp3',
-  //   picture: '../../11-.jpg'
-  // },
-  // // 4:30
-  // { english: '',
+  // 1:59
+  { english: 'I\'m busy right now',
+    romaji: 'anya ima isogashii',
+    japanese: 'アーニャ今忙しい',
+    episode: '11',
+    file: '../../11-imaisogashii.mp3',
+    picture: '../../11-imaisogashii.jpg'
+  },
+  // 5:12
+  { english: 'BWUAAAAAAAaaAuuu',
+    romaji: 'BWUAAAAAAAaaAuuu',
+    japanese: 'ぶあああああ',
+    episode: '11',
+    file: '../../11-bwa.mp3',
+    picture: '../../11-bwa.jpg'
+  },
+  // 6:02
+  { english: 'For now, untie me',
+    romaji: 'toriaezu kono nawa hodoke',
+    japanese: 'とりあえずこのなわ解け',
+    episode: '11',
+    file: '../../11-hodoke.mp3',
+    picture: '../../11-hodoke.jpg'
+  },
+  // 
+  { english: 'An ooting?',
+    romaji: 'odekeke?',
+    japanese: 'おでけけ？',
+    episode: '11',
+    file: '../../11-odekeke.mp3',
+    picture: '../../11-odekeke.jpg'
+  },
+  // 8:18
+  { english: 'I\'m sorry',
+    romaji: 'gomennasai',
+    japanese: 'ごめんなさい',
+    episode: '11',
+    file: '../../11-gomennasai.mp3',
+    picture: '../../11-gomennasai.jpg'
+  },
+  // 13:37
+  { english: 'Ehe!',
+    romaji: 'ehhen!',
+    japanese: 'えっへん！',
+    episode: '11',
+    file: '../../11-ehe.mp3',
+    picture: '../../11-ehe.jpg'
+  },
+  // 15:37
+  { english: 'Call me Starlight Anya.',
+    romaji: 'starlight anya to yobe.',
+    japanese: 'スターライトアーニャとよべ。',
+    episode: '11',
+    file: '../../11-starlightanya.mp3',
+    picture: '../../11-starlightanya.jpg'
+  },
+  // 18:59
+  { english: 'A year\'s worth of peanuts?',
+    romaji: 'peanuts ichinenbun?',
+    japanese: 'ピーナッツ１年分？',
+    episode: '11',
+    file: '../../11-peanutsichinenbun.mp3',
+    picture: '../../11-peanutsichinenbun.jpg'
+  },
+  // 4:30
+  // { english: 'I brought my plate!',
   //   romaji: 'osara katazuke!',
   //   japanese: '',
   //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
+  //   file: '../../12-osara.mp3',
+  //   picture: '../../12-osara.jpg'
   // },
-  // // 7:30
-  // { english: '',
-  //   romaji: 'anyanchi wa tottemo futsuu da to omoimasu',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 7:43
-  // { english: '',
-  //   romaji: 'matte! ii hito de futsuu no chichi!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 7:49
-  // { english: '',
-  //   romaji: 'gatan goton!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 9:11
-  // { english: '',
-  //   romaji: 'osaka..na!!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 10:43
-  // { english: '',
-  //   romaji: 'pepepepengin...!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 
-  // { english: '',
-  //   romaji: 'haha! yuukai sareru!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 16:36
-  // { english: '',
-  //   romaji: 'wao',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 17:09
-  // { english: '',
-  //   romaji: 'pengin!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 18:56
-  // { english: '',
-  //   romaji: 'yororosu onegai surumasu',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 20:55
-  // { english: '',
-  //   romaji: 'kokoro shite kakare',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 21:31
-  // { english: '',
+  // 7:30
+  { english: 'Anya\'s family is very normal.',
+    romaji: 'anyanchi wa tottemo futsuu da to omoimasu.',
+    japanese: 'アーニャんちはとっても普通だと思います。',
+    episode: '12',
+    file: '../../12-anyanchifutsuu.mp3',
+    picture: '../../12-anyanchifutsuu.jpg'
+  },
+  // 7:43
+  { english: 'Wait! My kind and normal papa!',
+    romaji: 'matte! ii hito de futsuu no chichi!',
+    japanese: '待って！いい人で普通の父！',
+    episode: '12',
+    file: '../../12-futsuunochichi.mp3',
+    picture: '../../12-futsuunochichi.jpg'
+  },
+  // 9:11
+  { english: 'So many... fish!!',
+    romaji: 'osaka..na!!',
+    japanese: 'おさか…な！！',
+    episode: '12',
+    file: '../../12-osakana.mp3',
+    picture: '../../12-osakana.jpg'
+  },
+  { english: 'Octopus',
+    romaji: 'tako!',
+    japanese: 'たこ！',
+    episode: '12',
+    file: '../../12-tako.mp3',
+    picture: '../../12-tako.jpg'
+  },
+  { english: 'Starfish',
+    romaji: 'hitode',
+    japanese: 'ヒトデ',
+    episode: '12',
+    file: '../../12-hitode.mp3',
+    picture: '../../12-hitode.jpg'
+  },
+  { english: 'A tiny shark!',
+    romaji: 'chikkoi same!',
+    japanese: 'ちっこいさめ！',
+    episode: '12',
+    file: '../../12-same.mp3',
+    picture: '../../12-same.jpg'
+  },
+  // 10:43
+  { english: 'P-p-p-penguins...!',
+    romaji: 'pepepepengin...!',
+    japanese: 'ぺぺぺペンギン…！',
+    episode: '12',
+    file: '../../12-penguins.mp3',
+    picture: '../../12-penguins.jpg'
+  },
+  // 
+  { english: 'I\'m being kidnapped!',
+    romaji: 'yuukai sareru!',
+    japanese: '誘拐される！',
+    episode: '12',
+    file: '../../12-yuukai.mp3',
+    picture: '../../12-yuukai.jpg'
+  },
+  // 16:36
+  { english: 'Wow',
+    romaji: 'wao',
+    japanese: 'わお',
+    episode: '12',
+    file: '../../12-wow.mp3',
+    picture: '../../12-wow.jpg'
+  },
+  // 17:09
+  { english: 'Penguin!',
+    romaji: 'pengin!',
+    japanese: 'ペンギン！',
+    episode: '12',
+    file: '../../12-penguin.mp3',
+    picture: '../../12-penguin.jpg'
+  },
+  // 18:56
+  { english: 'Pweased to made your akwaintz.',
+    romaji: 'yororosu onegai surumasu',
+    japanese: 'よろろすおねがいするます',
+    episode: '12',
+    file: '../../12-yororosu.mp3',
+    picture: '../../12-yororosu.jpg'
+  },
+  // 21:31
+  // { english: 'I hate you, mama and papa! I\'m running away!',
   //   romaji: 'chichi mo haha mo kirai! anya iede suru!',
   //   japanese: '',
   //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
+  //   file: '../../12-kirai.mp3',
+  //   picture: '../../12-kirai.jpg'
   // },
-  // // 22:05
-  // { english: '',
-  //   romaji: 'yoshi, tsutekoi omaera',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
-  // // 22:10
-  // { english: '',
-  //   romaji: 'tasuke ni ikuzo!',
-  //   japanese: '',
-  //   episode: '12',
-  //   file: '../../12-.mp3',
-  //   picture: '../../12-.jpg'
-  // },
+  // 22:05
+  { english: 'Follow me, you guys',
+    romaji: 'tsuitekoi omaera',
+    japanese: 'ついてこい、お前ら',
+    episode: '12',
+    file: '../../12-tsuitekoi.mp3',
+    picture: '../../12-tsuitekoi.jpg'
+  },
+  // 22:10
+  { english: 'We\'re going to save them!',
+    romaji: 'tasuke ni ikuzo!',
+    japanese: '助けに行くぞ！',
+    episode: '12',
+    file: '../../12-tasuke.mp3',
+    picture: '../../12-tasuke.jpg'
+  },
 ];
 
 export default sampleData;
