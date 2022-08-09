@@ -2,7 +2,7 @@ import { Badge, ButtonBase } from "@mui/material";
 import { CSSTransition } from "react-transition-group";
 
 function SampleButton(props) {
-  const {theme, english, romaji, japanese, keypress, file, picture, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode, openSampleText, setOpenSampleText} = props;
+  const {theme, english, romaji, japanese, keypress, file, picture, showTransition, setShowTransition, selectedSamples, setSelectedSamples, mode, setOpenSampleText} = props;
   const {playAudio, setSample} = props;
   const sample = {english, romaji, japanese, keypress, file, picture};
 

@@ -3,10 +3,12 @@ import { PlayArrow, Favorite, FilterAlt, Settings } from "@mui/icons-material";
 import { useState } from "react";
 
 function MobileMenu(props) {
-  const {theme, setTheme, mode, setMode, handleOpenEpisodes} = props;
+  const {theme, setTheme, setMode, handleOpenEpisodes} = props;
   const [navValue, setNavValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
+
   const open = Boolean(anchorEl);
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
