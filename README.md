@@ -46,7 +46,7 @@ This app also features light and dark modes and a responsive layout.
 - Updated desktop view
 - Fixed theme colours
 
-## Future Plans
-- [x] Choose samples for customized soundboard
-- More samples
-- Add episode selector to mobile view
+**Versions 2.0.0**
+- Added all episode samples
+- Fixed layouts
+- Added episode selector to Settings on mobile view
