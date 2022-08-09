@@ -518,7 +518,7 @@ const sampleData = [
     romaji: 'starlight anya to yobe.',
     japanese: 'スターライトアーニャとよべ。',
     episode: '11',
-    file: '../../11-starlightanya.mp3',
+    file: '../../11-starlightanya-2.mp3',
     picture: '../../11-starlightanya.jpg'
   },
   // 18:59
