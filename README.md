@@ -2,10 +2,23 @@
 
 ## About
 This is a soundboard of **Anya Forger**'s lines from the anime **Spy x Family**.
-Currently, there are samples from episodes 1 to 6.
+There are samples from episodes 1 to 12.
 You can choose which episode's samples to display.
 
-This app also features light and dark modes and a responsive layout.
+Click an image or press the corresponding key to hear the voice sample.
+
+## Features
+- Keypress and click functionality
+- Ability to select and play favourites
+- Episode selector
+- Multilanguage
+  - English
+  - Japanese
+  - Romanized Japanese (Romaji)
+- Light and dark modes
+- Mobile and responsive layouts
+
+# Screenshots
 ### Light mode
 ![Screenshot in light mode](./public/screenshots/screenshot-light-full.png)
 ### Dark mode (and Japanese version)
@@ -25,6 +38,7 @@ This app also features light and dark modes and a responsive layout.
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
 - [React Transition Group](https://reactcommunity.org/react-transition-group/)
 
 ## Versions
