@@ -77,15 +77,13 @@ svg {
   }
   #sample-box {
     margin-top: 0;
+    margin-bottom: 3em;
   }
   h1.MuiTypography-h3 {
     font-size: x-large;
   }
   h1.MuiTypography-h5 {
     font-size: large;
-  }
-  .drum-machine {
-    margin-bottom: 3rem;
   }
   span.MuiBadge-colorSecondary {
     display: none;

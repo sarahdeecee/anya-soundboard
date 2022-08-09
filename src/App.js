@@ -14,6 +14,7 @@ import { useMemo, useReducer, useState } from "react";
 import { darkTheme, lightTheme } from './styles/Theme';
 import { ColorContext } from './ColorContext';
 import { KeyboardArrowUp } from '@mui/icons-material';
+import PageFooter from './components/Footer';
 
 function App() {
   const [sample, setSample] = useState({});
@@ -140,6 +141,7 @@ function App() {
               <SampleBoard openSampleText={openSampleText} setOpenSampleText={setOpenSampleText} sample={sample} setSample={setSample} samples={setSamplesFromEpisodesFull} playAudio={playAudio} handleKeyPress={handleKeyPress} theme={theme} showTransition={showTransition} setShowTransition={setShowTransition} selectedSamples={selectedSamples} setSelectedSamples={setSelectedSamples} mode={mode} />
             }
             {isSamplesEmpty && ((theme.language === 'japanese') ? 'エピソードを選択してください' : "No episodes selected!")}
+          <PageFooter />
           </Box>
           <MobileMenu theme={theme} setTheme={setTheme} mode={mode} setMode={setMode} handleOpenEpisodes={handleOpenEpisodes} />
         </Box>
