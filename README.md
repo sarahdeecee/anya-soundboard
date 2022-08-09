@@ -27,10 +27,11 @@ Click an image or press the corresponding key to hear the voice sample.
 ![Screenshot of mobile layout](./public/screenshots/screenshot-dark-mobile.png)
 ![Screenshot of mobile layout](./public/screenshots/screenshot-dark-mobile-menu.png)
 ![Screenshot of mobile layout](./public/screenshots/screenshot-light-mobile-menu.png)
+![Screenshot of mobile layout](./public/screenshots/screenshot-light-mobile.png)
 ### Episode selection
 ![Screenshot of episode selection](./public/screenshots/screenshot-episodeselect.png)
 ### Favourites
-![GIF of favourites being selected and played](./public/screenshots/screenshot-favourites.gif)
+![GIF of favourites being selected and played](./public/screenshots/screenshot-favourites2.gif)
 
 ## Stack
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
