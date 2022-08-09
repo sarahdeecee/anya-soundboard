@@ -11,9 +11,13 @@ This app also features light and dark modes and a responsive layout.
 ### Dark mode (and Japanese version)
 ![Screenshot in dark mode](./public/screenshots/screenshot-dark-full.png)
 ### Mobile version
-![Screenshot of mobile layout](./public/screenshots/screenshot-light-mobile.png)
+![Screenshot of mobile layout](./public/screenshots/screenshot-dark-mobile.png)
+![Screenshot of mobile layout](./public/screenshots/screenshot-dark-mobile-menu.png)
+![Screenshot of mobile layout](./public/screenshots/screenshot-light-mobile-menu.png)
 ### Episode selection
 ![Screenshot of episode selection](./public/screenshots/screenshot-episodeselect.png)
+### Favourites
+![GIF of favourites being selected and played](./public/screenshots/screenshot-favourites.gif)
 
 ## Stack
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
